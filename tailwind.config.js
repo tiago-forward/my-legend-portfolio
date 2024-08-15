@@ -51,6 +51,11 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        'border-main': '#665b418e',
+        'divide-main': '#6a64568e',
+        'bg-main': '#171d2c',
+        'border-header': '#483921',
+        'aside-bg': '#010a13',
       },
       borderRadius: {
         lg: 'var(--radius)',

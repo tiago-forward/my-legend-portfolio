@@ -2,9 +2,8 @@ import { Outlet } from 'react-router-dom'
 
 export function AppLayout() {
   return (
-    <div>
-      <h1>Cabeçalho</h1>
-      <div>
+    <div className="flex h-screen w-screen items-center justify-center bg-black">
+      <div className="h-full w-full">
         <Outlet />
       </div>
     </div>
