@@ -1,5 +1,7 @@
-import { NavLinkMain } from '@/components/navLinks/navLinkMain'
 import { SquareArrowOutUpRight } from 'lucide-react'
+
+import { NavLinkMain } from '@/components/navLinks/navLinkMain'
+import { Button } from '@/components/ui/button'
 
 export function ClientGeral() {
   return (
@@ -24,12 +26,19 @@ export function ClientGeral() {
             </ul>
           </nav>
         </header>
-        <article className="mt-60 w-2/5">
+        <article className="mt-60 flex w-2/5 flex-col items-start gap-4">
           <h1 className="text-5xl font-bold uppercase text-amber-50">
             Seja bem vindo ao meu portfolio
           </h1>
           <p className="text-xl">Desenvolvedor front-end</p>
-          <button className="cursor-not-allowed">Download CV</button>
+          <Button asChild className="rounded-none bg-[#1e2328] px-5 pb-1">
+            <a
+              href="#"
+              className="border-2 border-[#e9b874] uppercase tracking-widest text-[#f1ede1]"
+            >
+              Download CV
+            </a>
+          </Button>
         </article>
       </section>
       <section aria-labelledby="content-blocks">

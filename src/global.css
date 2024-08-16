@@ -67,6 +67,7 @@
     @apply bg-background text-foreground;
     color: #ccbb8a;
     font-family: "League Spartan", sans-serif;
+    letter-spacing: 0.05em;
   }
 }
 
