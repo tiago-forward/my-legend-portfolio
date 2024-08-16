@@ -1,5 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 
+import Logo from '@/assets/logo.png'
+import { Separator } from '@/components/ui/separator'
+
 export function Client() {
   return (
     <>
@@ -7,36 +10,97 @@ export function Client() {
       <div className="divide-divide-main border-border-main bg-bg-main flex min-h-screen flex-col divide-y-[1px] border-[1px]">
         <header className="border-border-header border-t-2">
           <nav className="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <ul className="col-span-2 flex gap-4 py-4 pl-8 uppercase">
-              <li>
-                <a href="#">Logo</a>
+            <ul className="col-span-2 flex items-center pl-8 uppercase">
+              <li className="">
+                <a href="#">
+                  <img src={Logo} alt="" className="w-[200px]" />
+                </a>
               </li>
-              <li>
-                <a href="#">Início</a>
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Início
+                </a>
               </li>
-              <li>
-                <a href="#">Contato</a>
-              </li>
-            </ul>
-
-            <ul className="col-span-2 flex items-center gap-4 py-4 pr-8 uppercase">
-              <li>
-                <a href="#">Sobre</a>
-              </li>
-              <li>
-                <a href="#">Habilidades</a>
-              </li>
-              <li>
-                <a href="#">Formações</a>
-              </li>
-              <li>
-                <a href="#">Projetos</a>
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Contato
+                </a>
               </li>
             </ul>
 
-            <div className="bg-aside-bg col-span-1 flex h-full items-center gap-4 p-2">
-              <a href="#">Foto</a>
-              <span>Tiago Forward</span>
+            <ul className="col-span-2 flex items-center pr-8 uppercase">
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Sobre
+                </a>
+              </li>
+              <Separator
+                orientation="vertical"
+                className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
+              />
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Habilidades
+                </a>
+              </li>
+              <Separator
+                orientation="vertical"
+                className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
+              />
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Formações
+                </a>
+              </li>
+              <Separator
+                orientation="vertical"
+                className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
+              />
+              <li className="menu-hover flex h-full items-center px-3">
+                <a
+                  href="#"
+                  className="my-4 transition duration-300 hover:text-white"
+                >
+                  Projetos
+                </a>
+              </li>
+            </ul>
+
+            <div className="bg-aside-bg col-span-1 flex h-full items-center gap-4 px-3 pb-2">
+              <div className="relative my-2 w-16 rounded-full hover:text-white">
+                <img
+                  src="https://github.com/tiago-forward.png"
+                  alt="tiago forward"
+                  className="rounded-full border-4 border-[#c0a16b]"
+                />
+                <div className="flex items-center justify-center">
+                  <span className="absolute rounded-[6px] border-2 border-[#c0a16b] bg-[#2f3640] px-2 text-xs font-bold">
+                    26
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold">TiagoForward</span>
+                <div className="flex items-center gap-2">
+                  <div className="bola bg-green-500"></div>
+                  <span className="mt-1 text-green-500">Online</span>
+                </div>
+              </div>
             </div>
           </nav>
         </header>
@@ -47,10 +111,20 @@ export function Client() {
                 <nav>
                   <ul className="flex gap-4 pt-2 uppercase">
                     <li>
-                      <a href="#">Geral</a>
+                      <a
+                        href="#"
+                        className="my-4 transition duration-300 hover:text-white"
+                      >
+                        Geral
+                      </a>
                     </li>
                     <li>
-                      <a href="#">GitHub</a>
+                      <a
+                        href="#"
+                        className="my-4 transition duration-300 hover:text-white"
+                      >
+                        GitHub
+                      </a>
                     </li>
                   </ul>
                 </nav>

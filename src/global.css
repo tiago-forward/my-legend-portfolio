@@ -69,3 +69,17 @@
     font-family: "League Spartan", sans-serif;
   }
 }
+
+.menu-hover:hover {
+  background: rgb(247,217,149);
+  background: linear-gradient(0deg, rgba(247,217,149,0.20211834733893552) 0%, rgba(249,230,135,0) 55%);
+  color: white;
+}
+
+.bola {
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  box-shadow: inset 0px 0px 3px 1px rgb(74 222 128);
+}
