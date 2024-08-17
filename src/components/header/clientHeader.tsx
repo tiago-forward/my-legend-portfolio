@@ -24,7 +24,7 @@ export function ClientHeader() {
           </li>
           {primaryNavItems.map((item) => (
             <>
-              <li className="flex h-full items-center">
+              <li className="relative flex h-full items-center">
                 <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
               </li>
             </>
@@ -34,7 +34,7 @@ export function ClientHeader() {
         <ul className="flex items-center justify-center uppercase lg:col-span-2 lg:justify-start lg:pr-8">
           {secondaryNavItems.map((item, index) => (
             <React.Fragment key={item.href}>
-              <li className="flex h-full items-center">
+              <li className="relative flex h-full items-center">
                 <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
               </li>
               {(index + 1) % 2 === 0 &&
