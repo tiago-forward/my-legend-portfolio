@@ -2,12 +2,12 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { ClientLayount } from './pages/_layouts/client'
-import { ClientFormacoes } from './pages/app/clientFormacoes'
-import { ClientGeral } from './pages/app/clientGeral'
-import { ClientGithub } from './pages/app/clientGithub'
-import { ClientHabilidades } from './pages/app/clientHabilidades'
-import { ClientProjetos } from './pages/app/clientProjetos'
-import { ClientSobre } from './pages/app/clientSobre'
+import { ClientFormacoes } from './pages/app/menuHeader/clientFormacoes'
+import { ClientGeral } from './pages/app/menuMain/clientGeral'
+import { ClientGithub } from './pages/app/menuMain/clientGithub'
+import { ClientHabilidades } from './pages/app/menuHeader/clientHabilidades'
+import { ClientProjetos } from './pages/app/menuHeader/clientProjetos'
+import { ClientSobre } from './pages/app/menuHeader/clientSobre'
 
 export const router = createBrowserRouter([
   {
