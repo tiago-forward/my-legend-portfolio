@@ -7,17 +7,18 @@ export function ClientGithub() {
         <nav>
           <ul className="flex gap-4 pt-2 uppercase">
             <li>
-              <NavLinkMain to="/" className="my-4 transition duration-300">
+              <NavLinkMain to="/" className="px-2 transition duration-300">
                 Geral
               </NavLinkMain>
             </li>
             <li>
               <NavLinkMain
                 to="/github"
-                className="my-4 transition duration-300"
+                className="px-2 text-[#f1ede1] transition duration-300"
               >
                 GitHub
               </NavLinkMain>
+              <div className="h-px w-full [background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(199,160,0.65)_50%,rgba(0,0,0,0)_100%)]"></div>
             </li>
           </ul>
         </nav>
