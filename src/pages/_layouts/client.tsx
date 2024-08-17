@@ -11,11 +11,9 @@ export function ClientLayount() {
       <div className="divide-divide-main border-border-main bg-bg-main bg-wallpaper flex min-h-screen flex-col divide-y-[1px] border-[1px] bg-cover bg-center bg-no-repeat">
         <header className="border-border-header border-t-2">
           <nav className="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <ul className="mt-8 flex flex-col items-center uppercase md:col-span-2 md:flex-row md:pl-8">
+            <ul className="mt-8 flex flex-col items-center uppercase md:col-span-2 md:flex-row md:mt-0 md:pl-8">
               <li className="">
-                <Link to="/">
-                  <img src={Logo} alt="" className="w-[200px]" />
-                </Link>
+                <img src={Logo} alt="" className="w-[200px]" />
               </li>
               <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
