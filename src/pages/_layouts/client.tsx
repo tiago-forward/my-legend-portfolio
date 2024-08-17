@@ -1,24 +1,27 @@
 import { Helmet } from 'react-helmet-async'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 import Logo from '@/assets/logo.png'
 import { Separator } from '@/components/ui/separator'
 
 export function ClientLayount() {
+  const { pathname } = useLocation()
+
   return (
     <>
       <Helmet title="Client" />
       <div className="divide-divide-main border-border-main bg-bg-main bg-wallpaper flex min-h-screen flex-col divide-y-[1px] border-[1px] bg-cover bg-center bg-no-repeat">
         <header className="border-border-header border-t-2">
-          <nav className="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <ul className="mt-8 flex flex-col items-center uppercase md:col-span-2 md:flex-row md:mt-0 md:pl-8">
+          <nav className="grid grid-cols-1 md:grid-cols-5 md:gap-4">
+            <ul className="mt-8 flex flex-col items-center uppercase md:col-span-2 md:mt-0 md:flex-row md:pl-8">
               <li className="">
                 <img src={Logo} alt="" className="w-[200px]" />
               </li>
-              <li className="menu-hover flex h-full items-center px-1 md:px-3">
+              <li className="flex h-full items-center">
                 <Link
                   to="/"
-                  className="my-4 text-sm transition duration-300 hover:text-white"
+                  data-current={pathname === '/'}
+                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
                 >
                   Início
                 </Link>
@@ -26,10 +29,11 @@ export function ClientLayount() {
             </ul>
 
             <ul className="flex items-center justify-center uppercase md:col-span-2 md:justify-start md:pr-8">
-              <li className="menu-hover flex h-full items-center px-1 md:px-3">
+              <li className="flex h-full items-center">
                 <Link
                   to="/sobre"
-                  className="my-4 text-sm transition duration-300 hover:text-white"
+                  data-current={pathname === '/sobre'}
+                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
                 >
                   Sobre
                 </Link>
@@ -38,10 +42,11 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-1 md:px-3">
+              <li className="flex h-full items-center">
                 <Link
                   to="/habilidades"
-                  className="my-4 text-sm transition duration-300 hover:text-white"
+                  data-current={pathname === '/habilidades'}
+                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
                 >
                   Habilidades
                 </Link>
@@ -50,10 +55,11 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-1 md:px-3">
+              <li className="flex h-full items-center">
                 <Link
                   to="/formacoes"
-                  className="my-4 text-sm transition duration-300 hover:text-white"
+                  data-current={pathname === '/formacoes'}
+                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
                 >
                   Formações
                 </Link>
@@ -62,10 +68,11 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-1 md:px-3">
+              <li className="flex h-full items-center">
                 <Link
                   to="/projetos"
-                  className="my-4 text-sm transition duration-300 hover:text-white"
+                  data-current={pathname === '/projetos'}
+                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
                 >
                   Projetos
                 </Link>
@@ -73,23 +80,33 @@ export function ClientLayount() {
             </ul>
 
             <div className="bg-aside-bg flex h-full items-center gap-4 px-3 pb-2 md:col-span-1">
-              <div className="relative my-2 w-16 rounded-full hover:text-white">
+              <div className="relative my-2 w-16 rounded-full border border-black hover:text-white">
                 <img
                   src="https://github.com/tiago-forward.png"
                   alt="tiago forward"
-                  className="rounded-full border-4 border-[#c0a16b]"
+                  className="rounded-full border-4 border-[#e9b874]"
                 />
                 <div className="flex items-center justify-center">
-                  <span className="absolute rounded-[6px] border-2 border-[#c0a16b] bg-[#2f3640] px-2 text-xs font-bold">
+                  <span
+                    className="absolute cursor-default rounded-[6px] border-2 border-[#e9b874] bg-[#2f3640] px-2 text-xs font-bold"
+                    title="Idade"
+                  >
                     26
                   </span>
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold">TiagoForward</span>
+                <span
+                  className="cursor-default font-bold text-[#f1ede1]"
+                  title="Nome"
+                >
+                  TiagoForward
+                </span>
                 <div className="flex items-center gap-2">
                   <div className="bola bg-green-500"></div>
-                  <span className="mt-1 text-green-500">Online</span>
+                  <span className="mt-1 cursor-default text-green-500">
+                    Online
+                  </span>
                 </div>
               </div>
             </div>

@@ -71,12 +71,6 @@
   }
 }
 
-.menu-hover:hover {
-  background: rgb(247,217,149);
-  background: linear-gradient(0deg, rgba(247,217,149,0.20211834733893552) 0%, rgba(249,230,135,0) 55%);
-  color: white;
-}
-
 .bola {
   border-radius: 50%;
   display: inline-block;
