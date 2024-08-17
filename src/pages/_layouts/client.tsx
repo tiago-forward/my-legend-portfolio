@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 import Logo from '@/assets/logo.png'
+import { NavLinkHeader } from '@/components/navLinks/navLinkHeader'
 import { Separator } from '@/components/ui/separator'
 
 export function ClientLayount() {
-  const { pathname } = useLocation()
-
   return (
     <>
       <Helmet title="Client" />
@@ -18,64 +17,34 @@ export function ClientLayount() {
                 <img src={Logo} alt="" className="w-[200px]" />
               </li>
               <li className="flex h-full items-center">
-                <Link
-                  to="/"
-                  data-current={pathname === '/'}
-                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
-                >
-                  Início
-                </Link>
+                <NavLinkHeader to="/">Início</NavLinkHeader>
               </li>
             </ul>
 
             <ul className="flex items-center justify-center uppercase md:col-span-2 md:justify-start md:pr-8">
               <li className="flex h-full items-center">
-                <Link
-                  to="/sobre"
-                  data-current={pathname === '/sobre'}
-                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
-                >
-                  Sobre
-                </Link>
+                <NavLinkHeader to="/sobre">Sobre</NavLinkHeader>
               </li>
               <Separator
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
               <li className="flex h-full items-center">
-                <Link
-                  to="/habilidades"
-                  data-current={pathname === '/habilidades'}
-                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
-                >
-                  Habilidades
-                </Link>
+                <NavLinkHeader to="/habilidades">Habilidades</NavLinkHeader>
               </li>
               <Separator
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
               <li className="flex h-full items-center">
-                <Link
-                  to="/formacoes"
-                  data-current={pathname === '/formacoes'}
-                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
-                >
-                  Formações
-                </Link>
+                <NavLinkHeader to="/formacoes">Formações</NavLinkHeader>
               </li>
               <Separator
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
               <li className="flex h-full items-center">
-                <Link
-                  to="/projetos"
-                  data-current={pathname === '/projetos'}
-                  className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-4 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1]"
-                >
-                  Projetos
-                </Link>
+                <NavLinkHeader to="/projetos">Projetos</NavLinkHeader>
               </li>
             </ul>
 
