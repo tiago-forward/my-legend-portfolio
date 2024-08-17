@@ -84,3 +84,7 @@
   width: 15px;
   box-shadow: inset 0px 0px 3px 1px rgb(74 222 128);
 }
+
+.bg-wallpaper {
+  background-image: url('@/assets/league-of-legends-ahri-4k-wallpaper-2.jpg'); ;
+}

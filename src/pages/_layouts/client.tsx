@@ -8,30 +8,30 @@ export function ClientLayount() {
   return (
     <>
       <Helmet title="Client" />
-      <div className="divide-divide-main border-border-main bg-bg-main flex min-h-screen flex-col divide-y-[1px] border-[1px]">
+      <div className="divide-divide-main border-border-main bg-bg-main bg-wallpaper flex min-h-screen flex-col divide-y-[1px] border-[1px] bg-cover bg-center bg-no-repeat">
         <header className="border-border-header border-t-2">
           <nav className="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <ul className="col-span-2 flex items-center pl-8 uppercase">
+            <ul className="mt-8 flex flex-col items-center uppercase md:col-span-2 md:flex-row md:pl-8">
               <li className="">
                 <Link to="/">
                   <img src={Logo} alt="" className="w-[200px]" />
                 </Link>
               </li>
-              <li className="menu-hover flex h-full items-center px-3">
+              <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
                   to="/"
-                  className="my-4 transition duration-300 hover:text-white"
+                  className="my-4 text-sm transition duration-300 hover:text-white"
                 >
                   Início
                 </Link>
               </li>
             </ul>
 
-            <ul className="col-span-2 flex items-center pr-8 uppercase">
-              <li className="menu-hover flex h-full items-center px-3">
+            <ul className="flex items-center justify-center uppercase md:col-span-2 md:justify-start md:pr-8">
+              <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
                   to="/sobre"
-                  className="my-4 transition duration-300 hover:text-white"
+                  className="my-4 text-sm transition duration-300 hover:text-white"
                 >
                   Sobre
                 </Link>
@@ -40,10 +40,10 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-3">
+              <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
                   to="/habilidades"
-                  className="my-4 transition duration-300 hover:text-white"
+                  className="my-4 text-sm transition duration-300 hover:text-white"
                 >
                   Habilidades
                 </Link>
@@ -52,10 +52,10 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-3">
+              <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
                   to="/formacoes"
-                  className="my-4 transition duration-300 hover:text-white"
+                  className="my-4 text-sm transition duration-300 hover:text-white"
                 >
                   Formações
                 </Link>
@@ -64,17 +64,17 @@ export function ClientLayount() {
                 orientation="vertical"
                 className="user-select-none center pointer-events-none left-1/2 h-10 w-[2px] -translate-x-1/2 transform-gpu [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(199,160,0,0.65)_50%,rgba(0,0,0,0)_100%)]"
               />
-              <li className="menu-hover flex h-full items-center px-3">
+              <li className="menu-hover flex h-full items-center px-1 md:px-3">
                 <Link
                   to="/projetos"
-                  className="my-4 transition duration-300 hover:text-white"
+                  className="my-4 text-sm transition duration-300 hover:text-white"
                 >
                   Projetos
                 </Link>
               </li>
             </ul>
 
-            <div className="bg-aside-bg col-span-1 flex h-full items-center gap-4 px-3 pb-2">
+            <div className="bg-aside-bg flex h-full items-center gap-4 px-3 pb-2 md:col-span-1">
               <div className="relative my-2 w-16 rounded-full hover:text-white">
                 <img
                   src="https://github.com/tiago-forward.png"
@@ -98,7 +98,7 @@ export function ClientLayount() {
           </nav>
         </header>
         <div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-5">
-          <main className="col-span-4 flex h-full flex-col justify-between px-8 pb-8">
+          <main className="col-span-4 flex h-full flex-col justify-between gap-10 px-2 pb-8 md:gap-0 md:px-8">
             {/* <section aria-labelledby="welcome-section">
               <header>
                 <nav>
@@ -106,7 +106,7 @@ export function ClientLayount() {
                     <li>
                       <a
                         href="#"
-                        className="my-4 transition duration-300 hover:text-white"
+                        className="my-4 transition duration-300 hover:text-white text-sm"
                       >
                         Geral
                       </a>
@@ -114,7 +114,7 @@ export function ClientLayount() {
                     <li>
                       <a
                         href="#"
-                        className="my-4 transition duration-300 hover:text-white"
+                        className="my-4 transition duration-300 hover:text-white text-sm"
                       >
                         GitHub
                       </a>
