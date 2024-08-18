@@ -1,4 +1,3 @@
-import { ChevronDown } from 'lucide-react'
 import { Link, LinkProps, useLocation } from 'react-router-dom'
 
 export interface NavLinkHeaderProps extends LinkProps { }
@@ -10,7 +9,6 @@ export function NavLinkHeader(props: NavLinkHeaderProps) {
     <>
       {pathname === props.to && (
         <div className="border-t-border-header absolute right-[40%] top-0 border-l-[14px] border-r-[14px] border-t-[14px] border-l-transparent border-r-transparent"></div>
-        // <ChevronDown size={35} className="absolute -top-2 right-[35%] border-2 border-[#655033]" />
       )}
       <Link
         data-current={pathname === props.to}
