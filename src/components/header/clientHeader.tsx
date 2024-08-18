@@ -23,18 +23,16 @@ export function ClientHeader() {
             <img src={Logo} alt="" className="w-[350px] p-1" />
           </li>
           {primaryNavItems.map((item) => (
-            <>
-              <li className="relative flex h-full items-center">
-                <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
-              </li>
-            </>
+            <li key={item.id} className="relative flex h-full items-center">
+              <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
+            </li>
           ))}
         </ul>
 
         <ul className="flex items-center justify-center uppercase lg:col-span-2 lg:justify-start lg:pr-8">
           {secondaryNavItems.map((item, index) => (
-            <React.Fragment key={item.href}>
-              <li className="relative flex h-full items-center">
+            <React.Fragment key={item.id}>
+              <li key={item.id} className="relative flex h-full items-center">
                 <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
               </li>
               {(index + 1) % 2 === 0 &&
