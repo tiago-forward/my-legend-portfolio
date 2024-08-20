@@ -7,17 +7,17 @@ import {
 import { Play } from 'lucide-react'
 import { useState } from 'react'
 
-import { AvatarFriend } from '../avatar/avatarFriend'
+import { AvatarFriend } from '../../avatar/avatarFriend'
 
-export default function AccordionRocketseat() {
+export default function AccordionGeral() {
   const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false)
 
   const friendList = [
-    { id: 1, url: 'https://github.com/diego3g.png', label: 'DiegoFernandes' },
+    { id: 1, url: 'https://github.com/randyrobson.png', label: 'RandyRobson' },
     {
       id: 2,
-      url: 'https://github.com/maykbrito.png',
-      label: 'MaykBrito',
+      url: 'https://github.com/michael-douglas-s.png',
+      label: 'MichaelDouglas',
     },
   ]
 
@@ -33,7 +33,7 @@ export default function AccordionRocketseat() {
             size={10}
             className={`mb-1 transform transition-transform duration-200 ${accordionIsOpen ? 'rotate-90' : 'rotate-0'}`}
           />
-          Rocketseat (0/2)
+          Geral (0/2)
         </AccordionTrigger>
         <AccordionContent>
           {friendList.map((friend) => (

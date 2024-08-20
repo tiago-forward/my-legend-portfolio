@@ -1,18 +1,30 @@
-import { Link, LinkProps, useLocation } from 'react-router-dom'
+import { Link, LinkProps } from 'react-router-dom'
 
-export interface NavLinkHeaderProps extends LinkProps { }
+import { useRoute } from '@/context/RouteContext'
+
+export interface NavLinkHeaderProps extends LinkProps {}
 
 export function NavLinkHeader(props: NavLinkHeaderProps) {
-  const { pathname } = useLocation()
+  const { activeRoute, setActiveRoute } = useRoute()
+
+  // Define a rota ativa quando o link é clicado
+  const handleClick = () => {
+    setActiveRoute(props.to as string)
+  }
+
+  const isActive =
+    (props.to === '/' && activeRoute === '/') ||
+    (props.to !== '/' && activeRoute.startsWith(props.to as string))
 
   return (
     <>
-      {pathname === props.to && (
+      {isActive && (
         <div className="border-t-border-header absolute right-[40%] top-0 border-l-[14px] border-r-[14px] border-t-[14px] border-l-transparent border-r-transparent"></div>
       )}
       <Link
-        data-current={pathname === props.to}
-        className="hover:bg-navLinkHover data-[current=true]:bg-navLinkHover flex h-full items-center px-2 text-sm transition duration-300 hover:text-[#f1ede1] data-[current=true]:text-[#f1ede1] lg:text-base xl:px-4"
+        onClick={handleClick}
+        data-current={isActive}
+        className={`hover:bg-navLinkHover flex h-full items-center px-2 text-sm transition duration-300 hover:text-[#f1ede1] ${isActive ? 'data-[current=true]:bg-navLinkHover text-[#f1ede1]' : ''}`}
         {...props}
       />
     </>
