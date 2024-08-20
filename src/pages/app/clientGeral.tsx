@@ -23,7 +23,7 @@ export function ClientGeral() {
           <h1 className="text-5xl font-bold uppercase text-amber-50">
             Seja bem vindo ao meu novo portfolio
           </h1>
-          <p className="text-xl text-[#ecd58f87]">Desenvolvedor front-end</p>
+          <p className="text-xl text-[#efe8d186]">Desenvolvedor front-end</p>
           <Button asChild className="rounded-none bg-[#1e2328] px-5 pb-1">
             <a
               href="#"

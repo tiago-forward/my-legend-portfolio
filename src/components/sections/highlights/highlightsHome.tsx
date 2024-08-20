@@ -2,7 +2,7 @@ import { SquareArrowOutUpRight } from 'lucide-react'
 
 export default function HighlightsHome() {
   return (
-    <section aria-labelledby="news-blocks" className="mt-auto">
+    <section aria-labelledby="news-blocks" className="mt-auto pb-8">
       <nav>
         <ul className="flex flex-col items-center gap-3 md:flex-row md:items-start">
           <li className="relative w-full sm:w-80">

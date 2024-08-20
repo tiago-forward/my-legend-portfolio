@@ -21,7 +21,7 @@ interface HeaderMainNavProps extends ComponentProps<'nav'> {
 export function HeaderMainNav({ children, ...props }: HeaderMainNavProps) {
   return (
     <nav {...props}>
-      <ul className="flex gap-4 pt-2 uppercase">{children}</ul>
+      <ul className="mb-8 flex gap-4 pt-2 uppercase">{children}</ul>
     </nav>
   )
 }
