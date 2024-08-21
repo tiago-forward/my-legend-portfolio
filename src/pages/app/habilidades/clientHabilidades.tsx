@@ -8,7 +8,7 @@ import {
 
 export function ClientHabilidades() {
   return (
-    <section className="flex h-full w-full flex-col">
+    <section className="flex h-full w-full flex-col justify-between">
       <HeaderMainRoot>
         <HeaderMainNav>
           <HeaderMainNavItem to={'/habilidades/hard-skills'}>

@@ -4,7 +4,7 @@ import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 
 export function HardSkills() {
   return (
-    <main className="grid justify-center gap-8 md:grid-cols-4">
+    <main className="grid max-h-[calc(100vh_-_25vh)] flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4">
       <div className="col-span-1">
         <div className="flex flex-col items-center border border-[#e9b874] pb-4">
           <span className="text-[80px]">8</span>
