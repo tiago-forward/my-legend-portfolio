@@ -14,9 +14,9 @@ export function ClientHabilidades() {
           <HeaderMainNavItem to={'/habilidades/hard-skills'}>
             Hard Skills
           </HeaderMainNavItem>
-          <HeaderMainNavItem to={'/habilidades/soft-skills'}>
+          {/* <HeaderMainNavItem to={'/habilidades/soft-skills'}>
             Soft Skills
-          </HeaderMainNavItem>
+          </HeaderMainNavItem> */}
         </HeaderMainNav>
       </HeaderMainRoot>
       <Outlet />

@@ -16,7 +16,7 @@ export function ClientGeral() {
         <HeaderMainRoot>
           <HeaderMainNav>
             <HeaderMainNavItem to={'/'}>Geral</HeaderMainNavItem>
-            <HeaderMainNavItem to={'/github'}>Github</HeaderMainNavItem>
+            {/* <HeaderMainNavItem to={'/github'}>Github</HeaderMainNavItem> */}
           </HeaderMainNav>
         </HeaderMainRoot>
         <article className="mt-10 flex flex-col items-start gap-4 md:mt-60 md:w-2/5">

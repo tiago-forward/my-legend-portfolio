@@ -20,7 +20,7 @@ export function ClientLayount() {
           <main className="col-span-4 flex h-full flex-col px-2 md:px-8">
             <Outlet />
           </main>
-          <aside className="bg-aside-bg col-span-4 lg:col-span-1">
+          <aside className="col-span-4 bg-aside-bg lg:col-span-1">
             <header className="mx-2 mb-4 mt-2">
               <span className="cursor-default uppercase">Social</span>
             </header>
