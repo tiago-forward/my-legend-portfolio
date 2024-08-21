@@ -2,9 +2,16 @@ import { FaCss3, FaHtml5, FaJs, FaReact } from 'react-icons/fa'
 import { RiNextjsFill } from 'react-icons/ri'
 import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 
+import { useMainHeight } from '@/hooks/useMainHeight'
+
 export function HardSkills() {
+  const mainHeight = useMainHeight(180)
+
   return (
-    <main className="grid max-h-[calc(100vh_-_25vh)] flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4">
+    <main
+      style={{ maxHeight: mainHeight }}
+      className="grid flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4"
+    >
       <div className="col-span-1">
         <div className="flex flex-col items-center border border-[#e9b874] pb-4">
           <span className="text-[80px]">8</span>

@@ -1,10 +1,17 @@
 import { CodeXml, Github, Linkedin, MoveUpRight } from 'lucide-react'
 
+import { useMainHeight } from '@/hooks/useMainHeight'
+
 export function Historia() {
+  const mainHeight = useMainHeight(180)
+
   return (
     <>
-      <main className="max-h-[calc(100vh_-_25vh)] flex-1 overflow-y-auto">
-        <header className="bg-aside-bg sticky top-0 z-10 border-b border-[#e9b874] border-opacity-30 shadow-xl shadow-[#010a13]">
+      <main
+        style={{ maxHeight: mainHeight }}
+        className={`flex-1 overflow-y-auto`}
+      >
+        <header className="sticky top-0 z-10 border-b border-[#e9b874] border-opacity-30 bg-aside-bg shadow-xl shadow-[#010a13]">
           <h1 className="text-4xl font-semibold uppercase text-amber-50">
             Meu nome é Tiago Lacerda Ferreira
           </h1>
