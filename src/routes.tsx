@@ -2,17 +2,18 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { ClientLayount } from './pages/_layouts/client'
-import { ClientGeral } from './pages/app/clientGeral'
-import { ClientGithub } from './pages/app/clientGithub'
-import { ClientSobre } from './pages/app/clientSobre'
+import { ClientHabilidades } from './pages/app/habilidades/clientHabilidades'
 import { HardSkills } from './pages/app/habilidades/hardSkills'
 import { SoftSkills } from './pages/app/habilidades/softSkills'
+import { ClientGeral } from './pages/app/home/clientGeral'
+import { ClientGithub } from './pages/app/home/clientGithub'
 import { ClientFormacoes } from './pages/app/menuHeader/clientFormacoes'
-import { ClientHabilidades } from './pages/app/menuHeader/clientHabilidades'
-import { ClientProjetos } from './pages/app/menuHeader/clientProjetos'
+import { ClientProjetos } from './pages/app/projetos/clientProjetos'
 import { DesafiosDeCurso } from './pages/app/projetos/desafiosDeCurso'
 import { DesafiosDeSites } from './pages/app/projetos/desafiosDeSites'
 import { Pessoais } from './pages/app/projetos/pessoais'
+import { ClientSobre } from './pages/app/sobre/clientSobre'
+import { Historia } from './pages/app/sobre/historia'
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ export const router = createBrowserRouter([
         children: [
           { path: '/', element: <ClientGeral /> },
           { path: '/github', element: <ClientGithub /> },
-          { path: '/sobre', element: <ClientSobre /> },
+          {
+            path: '/sobre',
+            element: <ClientSobre />,
+            children: [{ path: 'historia', element: <Historia /> }],
+          },
           {
             path: '/habilidades',
             element: <ClientHabilidades />,

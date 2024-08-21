@@ -30,6 +30,8 @@ export const RouteProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (activeRoute === '/') {
       setActiveSubRoute('/')
+    } else if (activeRoute === '/sobre/historia') {
+      setActiveSubRoute('/sobre/historia')
     } else if (activeRoute === '/habilidades/hard-skills') {
       setActiveSubRoute('/habilidades/hard-skills')
     } else if (activeRoute === '/projetos/pessoais') {

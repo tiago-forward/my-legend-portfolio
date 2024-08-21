@@ -9,7 +9,7 @@ export function ClientHeader() {
   const primaryNavItems = [{ id: 1, href: '/', label: 'Início' }]
 
   const secondaryNavItems = [
-    { id: 1, href: '/sobre', label: 'Sobre' },
+    { id: 1, href: '/sobre/historia', label: 'Sobre' },
     { id: 2, href: '/habilidades/hard-skills', label: 'Habilidades' },
     { id: 3, href: '/formacoes', label: 'Formações' },
     { id: 4, href: '/projetos/pessoais', label: 'Projetos' },
