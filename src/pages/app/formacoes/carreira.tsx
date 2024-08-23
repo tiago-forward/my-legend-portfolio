@@ -42,7 +42,10 @@ export function Carreira() {
           {Array.from({ length: 12 }).map((_, i) => {
             return (
               <>
-                <li className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
+                <li
+                  key={i}
+                  className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100"
+                >
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <div className="border border-[#e9b874] border-opacity-30 shadow-inner shadow-black hover:border-[#e9b874] hover:border-opacity-100">
