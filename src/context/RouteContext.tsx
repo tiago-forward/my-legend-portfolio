@@ -39,8 +39,6 @@ export const RouteProvider = ({ children }: { children: ReactNode }) => {
     } else if (activeRoute === '/projetos/pessoais') {
       setActiveSubRoute('/projetos/pessoais')
     }
-
-    console.log(activeRoute)
   }, [activeRoute])
 
   return (
