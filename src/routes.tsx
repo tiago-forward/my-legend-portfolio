@@ -2,12 +2,13 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { ClientLayount } from './pages/_layouts/client'
+import { Carreira } from './pages/app/formacoes/carreira'
+import { ClientFormacoes } from './pages/app/formacoes/clientFormacoes'
 import { ClientHabilidades } from './pages/app/habilidades/clientHabilidades'
 import { HardSkills } from './pages/app/habilidades/hardSkills'
 import { SoftSkills } from './pages/app/habilidades/softSkills'
 import { ClientGeral } from './pages/app/home/clientGeral'
 import { ClientGithub } from './pages/app/home/clientGithub'
-import { ClientFormacoes } from './pages/app/formacoes/clientFormacoes'
 import { ClientProjetos } from './pages/app/projetos/clientProjetos'
 import { DesafiosDeCurso } from './pages/app/projetos/desafiosDeCurso'
 import { DesafiosDeSites } from './pages/app/projetos/desafiosDeSites'
@@ -39,7 +40,11 @@ export const router = createBrowserRouter([
               { path: 'soft-skills', element: <SoftSkills /> },
             ],
           },
-          { path: '/formacoes', element: <ClientFormacoes /> },
+          {
+            path: '/formacoes',
+            element: <ClientFormacoes />,
+            children: [{ path: 'carreira', element: <Carreira /> }],
+          },
           {
             path: '/projetos',
             element: <ClientProjetos />,

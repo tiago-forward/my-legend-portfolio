@@ -11,12 +11,12 @@ export function ClientHeader() {
   const secondaryNavItems = [
     { id: 1, href: '/sobre/historia', label: 'Sobre' },
     { id: 2, href: '/habilidades/hard-skills', label: 'Habilidades' },
-    { id: 3, href: '/formacoes', label: 'Formações' },
+    { id: 3, href: '/formacoes/carreira', label: 'Formações' },
     { id: 4, href: '/projetos/pessoais', label: 'Projetos' },
   ]
 
   return (
-    <header className="border-border-header border-t-2">
+    <header className="border-t-2 border-border-header">
       <nav className="grid grid-cols-1 lg:grid-cols-5 lg:gap-4">
         <ul className="mt-8 flex flex-col items-center uppercase lg:col-span-2 lg:mt-0 lg:flex-row lg:pl-8">
           <li className="">
@@ -46,7 +46,7 @@ export function ClientHeader() {
           ))}
         </ul>
 
-        <div className="bg-aside-bg flex h-full items-center gap-4 px-3 pb-2 lg:col-span-1">
+        <div className="flex h-full items-center gap-4 bg-aside-bg px-3 pb-2 lg:col-span-1">
           <div className="relative my-2 w-16 rounded-full border border-black hover:text-white">
             <img
               src="https://github.com/tiago-forward.png"
