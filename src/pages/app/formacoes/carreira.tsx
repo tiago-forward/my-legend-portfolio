@@ -12,6 +12,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
+import { Label } from '@/components/ui/label'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useMainHeight } from '@/hooks/useMainHeight'
 
 export function Carreira() {
@@ -24,18 +26,28 @@ export function Carreira() {
     >
       <div className="col-span-1">
         <form>
-          <div className="space-x-2">
-            <input
-              type="checkbox"
-              name="certificado"
-              id="certificate"
-              checked
-            />
-
-            <label htmlFor="certificate" className="uppercase text-[#f1ede1]">
-              Certificados
-            </label>
-          </div>
+          <RadioGroup defaultValue="concluidos">
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem
+                value="concluidos"
+                id="r2"
+                className="border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              />
+              <Label htmlFor="r2" className="uppercase text-[#f1ede1]">
+                Concluídos
+              </Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem
+                value="cursando"
+                id="r3"
+                className="border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              />
+              <Label htmlFor="r3" className="uppercase text-[#f1ede1]">
+                Cursando
+              </Label>
+            </div>
+          </RadioGroup>
         </form>
       </div>
       <div className="col-span-1 md:col-span-3">
