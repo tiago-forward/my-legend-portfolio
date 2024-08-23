@@ -10,7 +10,7 @@ export function ClientProjetos() {
   return (
     <>
       <section className="flex h-full w-full flex-col justify-between">
-        <HeaderMainRoot>
+        {/* <HeaderMainRoot>
           <HeaderMainNav>
             <HeaderMainNavItem to={'/projetos/pessoais'}>
               Pessoais
@@ -22,11 +22,8 @@ export function ClientProjetos() {
               Desafio de sites
             </HeaderMainNavItem>
           </HeaderMainNav>
-        </HeaderMainRoot>
+        </HeaderMainRoot> */}
         <Outlet />
-        <div className="mt-52 text-center">
-          <h2 className="text-xl">Sem informação!</h2>
-        </div>
       </section>
     </>
   )

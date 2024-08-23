@@ -1,4 +1,5 @@
-import { MoveUpRight, X } from 'lucide-react'
+import { X } from 'lucide-react'
+import { FiExternalLink } from 'react-icons/fi'
 
 import Certificate from '@/assets/certificate/NLW Unite - Reactjs.png'
 import {
@@ -58,7 +59,7 @@ export function Carreira() {
                     </AlertDialogTrigger>
                     <AlertDialogContent className="flex flex-col items-center border-[#e9b874] bg-aside-bg px-0 pt-0 sm:min-w-[700px] sm:rounded-none">
                       <AlertDialogHeader className="relative space-y-0">
-                        <AlertDialogTitle className="absolute bottom-0 left-[33%] text-[#f1ede1]">
+                        <AlertDialogTitle className="absolute bottom-0 left-[33%] text-xl uppercase tracking-wider">
                           NLW Unite - Reactjs
                         </AlertDialogTitle>
                         <AlertDialogDescription>
@@ -76,11 +77,11 @@ export function Carreira() {
                             rel="noreferrer"
                           >
                             <span>Formação Rocketseat</span>
-                            <MoveUpRight size={18} />
+                            <FiExternalLink size={18} />
                           </a>
                         </div>
                       </AlertDialogFooter>
-                      <AlertDialogCancel className="absolute right-2 top-2 h-6 h-8 rounded-sm bg-aside-bg p-0 text-opacity-80 hover:bg-aside-bg hover:text-[#f1ede1] hover:text-opacity-100">
+                      <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 text-opacity-80 hover:bg-aside-bg hover:text-[#f1ede1] hover:text-opacity-100">
                         <X size={30} className="p-1" />
                       </AlertDialogCancel>
                     </AlertDialogContent>
