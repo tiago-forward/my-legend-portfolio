@@ -83,3 +83,28 @@
   background-image: url('@/assets/rockstar-lisa-5k-3840x2160-17449.jpg');
   box-shadow: 0 0 400px rgba(0,0,0,1) inset;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #010a13;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #83612b;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #af9771;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #4d3b1e;
+}
