@@ -103,7 +103,7 @@ export function Jornada() {
                 </AlertDialogTrigger>
                 <AlertDialogContent className="flex flex-col items-center border-[#e9b874] bg-aside-bg px-0 pt-0 sm:min-w-[700px] sm:rounded-none">
                   <AlertDialogHeader className="relative space-y-0">
-                    <AlertDialogTitle className="absolute bottom-0 left-[33%] text-xl uppercase tracking-wider text-[#f1ede1]">
+                    <AlertDialogTitle className="absolute bottom-0 left-1/2 m-auto w-4/5 -translate-x-2/4 border-b border-[#83612b] text-center text-xl uppercase tracking-wider text-[#f1ede1]">
                       {project.title}
                     </AlertDialogTitle>
                     <AlertDialogDescription>
@@ -111,7 +111,7 @@ export function Jornada() {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full"
+                          className="mb-10 w-full"
                         />
                       </div>
                     </AlertDialogDescription>
@@ -124,18 +124,21 @@ export function Jornada() {
                         className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
                         rel="noreferrer"
                       >
-                        <span>Repositório</span>
                         <FaGithub size={18} />
+                        <span>Repositório</span>
                       </a>
-                      <a
-                        href={project.projectUrl}
-                        target="_blank"
-                        className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
-                        rel="noreferrer"
-                      >
-                        <span>Projeto</span>
-                        <TbNavigationShare size={18} />
-                      </a>
+                      {project.projectUrl && (
+                        <a
+                          key={project.id}
+                          href={project.projectUrl}
+                          target="_blank"
+                          className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
+                          rel="noreferrer"
+                        >
+                          <TbNavigationShare size={18} />
+                          <span>Projeto</span>
+                        </a>
+                      )}
                     </div>
                   </AlertDialogFooter>
                   <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 text-opacity-80 hover:bg-aside-bg hover:text-[#f1ede1] hover:text-opacity-100">

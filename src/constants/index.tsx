@@ -4,7 +4,21 @@ import { RiNextjsFill } from 'react-icons/ri'
 import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { v4 as uuidv4 } from 'uuid'
 
-import ImageCertificate from '@/assets/certificate/NLW Unite - Reactjs.png'
+import ImageCertificate1 from '@/assets/certificate/Algoritmo 40 Horas.jpg'
+import ImageCertificate13 from '@/assets/certificate/Aprofundando em Hooks.jpg'
+import ImageCertificate9 from '@/assets/certificate/Clean Code.jpg'
+import ImageCertificate3 from '@/assets/certificate/Desenvolvimento Frontend com Angular.jpg'
+import ImageCertificate6 from '@/assets/certificate/Frontend.jpg'
+import ImageCertificate15 from '@/assets/certificate/Fundamentos do Next.js.jpg'
+import ImageCertificate8 from '@/assets/certificate/Fundamentos do React.jpg'
+import ImageCertificate12 from '@/assets/certificate/HTTP e Performance.jpg'
+import ImageCertificate14 from '@/assets/certificate/Integrando Frontend e Backend.jpg'
+import ImageCertificate11 from '@/assets/certificate/Masterizando o Tailwind.jpg'
+import ImageCertificate7 from '@/assets/certificate/Minicurso de UXUI Design.jpg'
+import ImageCertificate5 from '@/assets/certificate/NLW Unite Reactjs.jpg'
+import ImageCertificate4 from '@/assets/certificate/Semana do Python na Prática.jpg'
+import ImageCertificate10 from '@/assets/certificate/SEO para Devs.jpg'
+import ImageCertificate2 from '@/assets/certificate/Simplifica Excell Express.jpg'
 import ImageAdviceGeneratorApp from '@/assets/imageProject/Advice Generator App.jpeg'
 import ImageAgênciaXYZ from '@/assets/imageProject/Agência XYZ.jpeg'
 import ImageBlogr from '@/assets/imageProject/Blogr.jpeg'
@@ -105,51 +119,123 @@ export interface CertificatesProps {
 export const certificates: CertificatesProps[] = [
   {
     id: uuidv4(),
-    title: 'NLW Unite - Reactjs',
-    image: ImageCertificate,
+    title: 'Fundamentos do Next.js',
+    image: ImageCertificate15,
     status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
   {
     id: uuidv4(),
-    title: 'NLW Unite - Reactjs',
-    image: ImageCertificate,
+    title: 'Integrando Frontend e Backend',
+    image: ImageCertificate14,
     status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
   {
     id: uuidv4(),
-    title: 'NLW Unite - Reactjs',
-    image: ImageCertificate,
+    title: 'Aprofundando em Hooks',
+    image: ImageCertificate13,
     status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
   {
     id: uuidv4(),
-    title: 'NLW Unite - Reactjs',
-    image: ImageCertificate,
+    title: 'HTTP e Perfomance',
+    image: ImageCertificate12,
     status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
   {
     id: uuidv4(),
-    title: 'Curso de Next.js',
-    image: ImageCertificate,
-    status: 'cursando',
+    title: 'Masterizando o Tailwind',
+    image: ImageCertificate11,
+    status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
   {
     id: uuidv4(),
-    title: 'Curso de Next.js',
-    image: ImageCertificate,
-    status: 'cursando',
+    title: 'SEO para Devs',
+    image: ImageCertificate10,
+    status: 'concluidos',
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
+  },
+  {
+    id: uuidv4(),
+    title: 'Clean Code',
+    image: ImageCertificate9,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Rocketseat',
+  },
+  {
+    id: uuidv4(),
+    title: 'Fundamentos do React',
+    image: ImageCertificate8,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Rocketseat',
+  },
+  {
+    id: uuidv4(),
+    title: 'Minicurso de UXUI Design',
+    image: ImageCertificate7,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Cubos Academy',
+  },
+  {
+    id: uuidv4(),
+    title: 'Frontend',
+    image: ImageCertificate6,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação DevQuest - Dev em Dobro',
+  },
+  {
+    id: uuidv4(),
+    title: 'NLW Unite Reactjs',
+    image: ImageCertificate5,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Rocketseat',
+  },
+  {
+    id: uuidv4(),
+    title: 'Semana do Python na Prática',
+    image: ImageCertificate4,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Empowerdata',
+  },
+  {
+    id: uuidv4(),
+    title: 'Desenvolvimento Frontend com Angular',
+    image: ImageCertificate3,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação DIO',
+  },
+  {
+    id: uuidv4(),
+    title: 'Simplifica Excel Express',
+    image: ImageCertificate2,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação SIMPLIFICA TREINAMENTOS',
+  },
+  {
+    id: uuidv4(),
+    title: 'Algoritmo 40 Horas',
+    image: ImageCertificate1,
+    status: 'concluidos',
+    link: 'https://www.rocketseat.com.br/',
+    foundation: 'Formação Curso em Video',
   },
 ]
 

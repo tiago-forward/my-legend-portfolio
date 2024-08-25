@@ -53,7 +53,7 @@ export function Carreira() {
               Concluídos
             </Label>
           </div>
-          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          {/* <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="cursando"
               id="r2"
@@ -65,7 +65,7 @@ export function Carreira() {
             >
               Cursando
             </Label>
-          </div>
+          </div> */}
         </RadioGroup>
       </div>
       <div className="col-span-1 md:col-span-3">
@@ -87,7 +87,7 @@ export function Carreira() {
                 </AlertDialogTrigger>
                 <AlertDialogContent className="flex flex-col items-center border-[#e9b874] bg-aside-bg px-0 pt-0 sm:min-w-[700px] sm:rounded-none">
                   <AlertDialogHeader className="relative space-y-0">
-                    <AlertDialogTitle className="absolute bottom-0 left-[35%] text-xl uppercase tracking-wider">
+                    <AlertDialogTitle className="absolute bottom-0 left-1/2 m-auto w-4/5 -translate-x-2/4 border-b border-[#83612b] text-center text-xl uppercase tracking-wider text-[#f1ede1]">
                       {certificate.title}
                     </AlertDialogTitle>
                     <AlertDialogDescription>
@@ -95,7 +95,7 @@ export function Carreira() {
                         <img
                           src={certificate.image}
                           alt={certificate.title}
-                          className="w-full"
+                          className="mb-10 w-full"
                         />
                       </div>
                     </AlertDialogDescription>
@@ -108,8 +108,8 @@ export function Carreira() {
                         className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
                         rel="noreferrer"
                       >
-                        <span>{certificate.foundation}</span>
                         <FiExternalLink size={18} />
+                        <span>{certificate.foundation}</span>
                       </a>
                     </div>
                   </AlertDialogFooter>
