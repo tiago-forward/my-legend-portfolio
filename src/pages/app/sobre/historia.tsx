@@ -19,8 +19,22 @@ export function Historia() {
             <span className="mb-4 text-lg text-[#efe8d186]">
               Campina Grande-PB - 20/08/2024
             </span>
-            <Linkedin size={18} />
-            <Github size={18} />
+            <a
+              href="https://www.linkedin.com/in/tiago-lacerda-devfrontend/"
+              target="_blank"
+              rel="noreferrer"
+              className="duration-300 hover:text-[#f1ede1]"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              href="https://github.com/tiago-forward"
+              target="_blank"
+              rel="noreferrer"
+              className="duration-300 hover:text-[#f1ede1]"
+            >
+              <Github size={18} />
+            </a>
           </div>
         </header>
         <article className="md:w-2/5">
@@ -69,7 +83,7 @@ export function Historia() {
               habilidades e experiências!
             </p>
             <div>
-              <div className="ml-8 flex text-lg text-cyan-600">
+              <div className="ml-8 flex items-center text-lg text-cyan-600 hover:text-cyan-100">
                 <a
                   href="mailto:devtiagoforward@gmail.com"
                   target="_blank"
@@ -77,9 +91,9 @@ export function Historia() {
                 >
                   devtiagoforward@gmail.com
                 </a>
-                <MoveUpRight size={18} />
+                <MoveUpRight size={14} />
               </div>
-              <div className="ml-8 flex text-lg text-cyan-600">
+              <div className="ml-8 flex items-center text-lg text-cyan-600 hover:text-cyan-100">
                 <a
                   href="https://wa.me/5583986236928"
                   target="_blank"
@@ -87,7 +101,7 @@ export function Historia() {
                 >
                   (83) 986236928
                 </a>
-                <MoveUpRight size={18} />
+                <MoveUpRight size={14} />
               </div>
             </div>
           </div>

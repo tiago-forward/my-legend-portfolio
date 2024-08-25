@@ -108,3 +108,19 @@
 ::-webkit-scrollbar-thumb:active {
   background: #4d3b1e;
 }
+
+.buttonGeral {
+  background-color: #292B30;
+  border: 2px solid #e9b874;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid #4d3b1e;;
+  outline-color: #4d3b1e;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.buttonGeral:hover {
+  border: 2px solid #f1ede1;
+  box-shadow: inset 0 0 20px #4d3b1e, 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 10px #4d3b1e; 
+}

@@ -24,10 +24,10 @@ export function ClientGeral() {
             Seja bem vindo ao meu novo portfolio
           </h1>
           <p className="text-xl text-[#efe8d186]">Desenvolvedor front-end</p>
-          <Button asChild className="rounded-none bg-[#1e2328] px-5 pb-1">
+          <Button asChild className="buttonGeral group rounded-none">
             <a
               href="#"
-              className="border-2 border-[#e9b874] uppercase tracking-widest text-[#f1ede1]"
+              className="border-2 uppercase tracking-widest text-[#af9771] hover:text-[#f1ede1]"
             >
               Download CV
             </a>

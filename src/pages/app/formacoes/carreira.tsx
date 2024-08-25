@@ -95,24 +95,34 @@ export function Carreira() {
       className="grid flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4"
     >
       <div className="col-span-1">
-        <RadioGroup defaultValue="concluidos" onValueChange={handleChangeState}>
-          <div className="flex items-center space-x-2">
+        <RadioGroup
+          defaultValue="concluidos"
+          onValueChange={handleChangeState}
+          className="flex flex-col items-start gap-0"
+        >
+          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="concluidos"
-              id="r2"
-              className="border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              id="r1"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
             />
-            <Label htmlFor="r2" className="uppercase text-[#f1ede1]">
+            <Label
+              htmlFor="r1"
+              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+            >
               Concluídos
             </Label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="cursando"
-              id="r3"
-              className="border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              id="r2"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
             />
-            <Label htmlFor="r3" className="uppercase text-[#f1ede1]">
+            <Label
+              htmlFor="r2"
+              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+            >
               Cursando
             </Label>
           </div>
