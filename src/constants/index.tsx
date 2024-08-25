@@ -299,7 +299,7 @@ export const projects: ProjectsProps[] = [
     id: uuidv4(),
     title: 'Coffee Delivery',
     image: ImageCoffeeDelivery,
-    status: ['todos', 'finalizado'],
+    status: ['todos', 'desenvolvimento'],
     repositoryUrl:
       'https://github.com/tiago-forward/coffee-delivery-desafio-react',
     projectUrl: 'https://coffee-delivery-desafio-react.vercel.app/',

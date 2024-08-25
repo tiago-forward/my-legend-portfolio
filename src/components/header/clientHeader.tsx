@@ -19,11 +19,20 @@ export function ClientHeader() {
     <header className="border-t-2 border-border-header">
       <nav className="grid grid-cols-1 lg:grid-cols-5 lg:gap-4">
         <ul className="mt-8 flex flex-col items-center uppercase lg:col-span-2 lg:mt-0 lg:flex-row lg:pl-8">
-          <li className="">
-            <img src={Logo} alt="" className="w-[350px] p-1" />
+          <li className="space-x-4">
+            <a href="/">
+              <img
+                src={Logo}
+                alt="Logo Tiago Forward"
+                className="w-[350px] p-1"
+              />
+            </a>
           </li>
           {primaryNavItems.map((item) => (
-            <li key={item.id} className="relative flex h-full items-center">
+            <li
+              key={item.id}
+              className="relative hidden h-full items-center md:flex"
+            >
               <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
             </li>
           ))}

@@ -19,7 +19,7 @@ export function ClientGeral() {
             {/* <HeaderMainNavItem to={'/github'}>Github</HeaderMainNavItem> */}
           </HeaderMainNav>
         </HeaderMainRoot>
-        <article className="mt-10 flex flex-col items-start gap-4 md:mt-60 md:w-2/5">
+        <article className="mt-10 flex flex-col items-start gap-4 md:w-2/5 xl:mt-60">
           <h1 className="text-5xl font-bold uppercase text-amber-50">
             Seja bem vindo ao meu novo portfolio
           </h1>
