@@ -10,9 +10,7 @@ import { SoftSkills } from './pages/app/habilidades/softSkills'
 import { ClientGeral } from './pages/app/home/clientGeral'
 import { ClientGithub } from './pages/app/home/clientGithub'
 import { ClientProjetos } from './pages/app/projetos/clientProjetos'
-import { DesafiosDeCurso } from './pages/app/projetos/desafiosDeCurso'
-import { DesafiosDeSites } from './pages/app/projetos/desafiosDeSites'
-import { Pessoais } from './pages/app/projetos/pessoais'
+import { Jornada } from './pages/app/projetos/jornada'
 import { ClientSobre } from './pages/app/sobre/clientSobre'
 import { Historia } from './pages/app/sobre/historia'
 
@@ -48,11 +46,7 @@ export const router = createBrowserRouter([
           {
             path: '/projetos',
             element: <ClientProjetos />,
-            children: [
-              { path: 'pessoais', element: <Pessoais /> },
-              { path: 'desafio-de-cursos', element: <DesafiosDeCurso /> },
-              { path: 'desafio-de-sites', element: <DesafiosDeSites /> },
-            ],
+            children: [{ path: 'jornada', element: <Jornada /> }],
           },
         ],
       },

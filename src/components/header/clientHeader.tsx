@@ -12,7 +12,7 @@ export function ClientHeader() {
     { id: 1, href: '/sobre/historia', label: 'Sobre' },
     { id: 2, href: '/habilidades/hard-skills', label: 'Habilidades' },
     { id: 3, href: '/formacoes/carreira', label: 'Formações' },
-    { id: 4, href: '/projetos/pessoais', label: 'Projetos' },
+    { id: 4, href: '/projetos/jornada', label: 'Projetos' },
   ]
 
   return (

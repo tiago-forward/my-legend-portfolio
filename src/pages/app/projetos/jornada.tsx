@@ -78,7 +78,7 @@ const dataCertificates: DataCertificatesProps[] = [
   },
 ]
 
-export function Pessoais() {
+export function Jornada() {
   const mainHeight = useMainHeight(180)
 
   const [filteredCertificates, setFilteredCertificates] = useState<
@@ -97,7 +97,7 @@ export function Pessoais() {
   return (
     <main
       style={{ maxHeight: mainHeight }}
-      className="mt-20 grid flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4"
+      className="grid flex-1 justify-center gap-8 overflow-y-auto md:grid-cols-4"
     >
       <div className="col-span-1">
         <RadioGroup

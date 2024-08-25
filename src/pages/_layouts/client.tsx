@@ -11,7 +11,7 @@ export function ClientLayount() {
 
   return (
     <>
-      <Helmet title="Client" />
+      <Helmet title="Início" />
       <div
         className={`divide-divide-main bg-aside-bg ${activeRoute === '/' ? `bg-wallpaper` : `bg-aside-bg`} flex min-h-screen flex-col divide-y-[1px] border-[1px] border-zinc-800 bg-cover bg-bottom bg-no-repeat`}
       >

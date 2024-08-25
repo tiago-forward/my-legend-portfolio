@@ -36,8 +36,8 @@ export const RouteProvider = ({ children }: { children: ReactNode }) => {
       setActiveSubRoute('/habilidades/hard-skills')
     } else if (activeRoute === '/formacoes/carreira') {
       setActiveSubRoute('/formacoes/carreira')
-    } else if (activeRoute === '/projetos/pessoais') {
-      setActiveSubRoute('/projetos/pessoais')
+    } else if (activeRoute === '/projetos/jornada') {
+      setActiveSubRoute('/projetos/jornada')
     }
   }, [activeRoute])
 

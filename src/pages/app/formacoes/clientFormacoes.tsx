@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { Outlet } from 'react-router-dom'
 
 import {
@@ -9,6 +10,7 @@ import {
 export function ClientFormacoes() {
   return (
     <>
+      <Helmet title="Formações" />
       <section className="flex h-full w-full flex-col justify-between">
         <HeaderMainRoot>
           <HeaderMainNav>
