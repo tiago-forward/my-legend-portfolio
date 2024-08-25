@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { TbNavigationShare } from 'react-icons/tb'
 
-import LegendsPortfolio from '@/assets/projects/Legends Portfolio.png'
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -16,82 +15,21 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { projects, ProjectsProps } from '@/constants/index'
 import { useMainHeight } from '@/hooks/useMainHeight'
-
-interface DataCertificatesProps {
-  id: number
-  title: string
-  image: string
-  status: ('todos' | 'desenvolvimento' | 'finalizado')[]
-  link: string
-  foundation: string
-}
-
-const dataCertificates: DataCertificatesProps[] = [
-  {
-    id: 1,
-    title: 'NLW Unite - Reactjs',
-    image: LegendsPortfolio,
-    status: ['todos', 'desenvolvimento'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 2,
-    title: 'NLW Unite - Reactjs',
-    image: LegendsPortfolio,
-    status: ['todos', 'desenvolvimento'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 3,
-    title: 'NLW Unite - Reactjs',
-    image: LegendsPortfolio,
-    status: ['todos', 'desenvolvimento'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 4,
-    title: 'NLW Unite - Reactjs',
-    image: LegendsPortfolio,
-    status: ['todos', 'desenvolvimento'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 5,
-    title: 'Curso de Next.js',
-    image: LegendsPortfolio,
-    status: ['todos', 'finalizado'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 6,
-    title: 'Curso de Next.js',
-    image: LegendsPortfolio,
-    status: ['todos', 'finalizado'],
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-]
 
 export function Jornada() {
   const mainHeight = useMainHeight(180)
 
-  const [filteredCertificates, setFilteredCertificates] = useState<
-    DataCertificatesProps[]
-  >(() => dataCertificates.filter((cert) => cert.status.includes('todos')))
+  const [filteredProjects, setFilteredProjects] = useState<ProjectsProps[]>(
+    () => projects.filter((cert) => cert.status.includes('todos')),
+  )
 
   function handleChangeState(
     status: 'todos' | 'desenvolvimento' | 'finalizado',
   ) {
-    const filtered = dataCertificates.filter((cert) =>
-      cert.status.includes(status),
-    )
-    setFilteredCertificates(filtered)
+    const filtered = projects.filter((cert) => cert.status.includes(status))
+    setFilteredProjects(filtered)
   }
 
   return (
@@ -148,17 +86,17 @@ export function Jornada() {
       </div>
       <div className="col-span-1 md:col-span-3">
         <ul className="flex flex-wrap items-center gap-2">
-          {filteredCertificates.map((certificate) => (
+          {filteredProjects.map((project) => (
             <li
-              key={certificate.id}
+              key={project.id}
               className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100"
             >
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <div className="border border-[#e9b874] border-opacity-30 shadow-inner shadow-black hover:border-[#e9b874] hover:border-opacity-100">
                     <img
-                      src={LegendsPortfolio}
-                      alt=""
+                      src={project.image}
+                      alt={project.title}
                       className="w-80 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]"
                     />
                   </div>
@@ -166,18 +104,22 @@ export function Jornada() {
                 <AlertDialogContent className="flex flex-col items-center border-[#e9b874] bg-aside-bg px-0 pt-0 sm:min-w-[700px] sm:rounded-none">
                   <AlertDialogHeader className="relative space-y-0">
                     <AlertDialogTitle className="absolute bottom-0 left-[33%] text-xl uppercase tracking-wider text-[#f1ede1]">
-                      My Legend Portfolio
+                      {project.title}
                     </AlertDialogTitle>
                     <AlertDialogDescription>
                       <div>
-                        <img src={LegendsPortfolio} alt="" className="w-full" />
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full"
+                        />
                       </div>
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <div className="flex items-center gap-8">
                       <a
-                        href="https://github.com/tiago-forward/my-legend-portfolio"
+                        href={project.repositoryUrl}
                         target="_blank"
                         className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
                         rel="noreferrer"
@@ -186,7 +128,7 @@ export function Jornada() {
                         <FaGithub size={18} />
                       </a>
                       <a
-                        href="https://my-legend-portfolio-snowy.vercel.app/"
+                        href={project.projectUrl}
                         target="_blank"
                         className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
                         rel="noreferrer"

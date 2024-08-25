@@ -1,7 +1,4 @@
-import { FaCss3, FaHtml5, FaJs, FaReact } from 'react-icons/fa'
-import { RiNextjsFill } from 'react-icons/ri'
-import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
-
+import { hardSkills, hardSkillsProps } from '@/constants/index'
 import { useCountUp } from '@/hooks/useCountUp'
 import { useMainHeight } from '@/hooks/useMainHeight'
 
@@ -24,38 +21,15 @@ export function HardSkills() {
       </div>
       <div className="col-span-1 md:col-span-3">
         <ul className="flex flex-wrap items-center gap-4">
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <FaHtml5 className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">HTML</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <FaCss3 className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">CSS</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <FaJs className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">JavaScript</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <SiTypescript className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">TypeScript</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <FaReact className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">React</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <SiStyledcomponents className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">StyledComponents</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <SiTailwindcss className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">TailwindCSS</h3>
-          </li>
-          <li className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100">
-            <RiNextjsFill className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
-            <h3 className="cursor-default">Next</h3>
-          </li>
+          {hardSkills.map((skill: hardSkillsProps) => (
+            <li
+              key={skill.id}
+              className="m-auto flex flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100"
+            >
+              {skill.icon}
+              <h3 className="cursor-default">{skill.title}</h3>
+            </li>
+          ))}
         </ul>
       </div>
     </main>

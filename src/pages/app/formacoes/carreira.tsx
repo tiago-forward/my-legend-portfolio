@@ -2,7 +2,6 @@ import { X } from 'lucide-react'
 import { useState } from 'react'
 import { FiExternalLink } from 'react-icons/fi'
 
-import CertificateImage from '@/assets/certificate/NLW Unite - Reactjs.png'
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -15,77 +14,18 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { certificates, CertificatesProps } from '@/constants/index'
 import { useMainHeight } from '@/hooks/useMainHeight'
-
-interface DataCertificatesProps {
-  id: number
-  title: string
-  image: string
-  status: 'concluidos' | 'cursando'
-  link: string
-  foundation: string
-}
-
-const dataCertificates: DataCertificatesProps[] = [
-  {
-    id: 1,
-    title: 'NLW Unite - Reactjs',
-    image: CertificateImage,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 2,
-    title: 'NLW Unite - Reactjs',
-    image: CertificateImage,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 3,
-    title: 'NLW Unite - Reactjs',
-    image: CertificateImage,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 4,
-    title: 'NLW Unite - Reactjs',
-    image: CertificateImage,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 5,
-    title: 'Curso de Next.js',
-    image: CertificateImage,
-    status: 'cursando',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-  {
-    id: 6,
-    title: 'Curso de Next.js',
-    image: CertificateImage,
-    status: 'cursando',
-    link: 'https://www.rocketseat.com.br/',
-    foundation: 'Formação Rocketseat',
-  },
-]
 
 export function Carreira() {
   const mainHeight = useMainHeight(180)
 
   const [filteredCertificates, setFilteredCertificates] = useState<
-    DataCertificatesProps[]
-  >(() => dataCertificates.filter((cert) => cert.status === 'concluidos'))
+    CertificatesProps[]
+  >(() => certificates.filter((cert) => cert.status === 'concluidos'))
 
   function handleChangeState(status: 'concluidos' | 'cursando') {
-    const filtered = dataCertificates.filter((cert) => cert.status === status)
+    const filtered = certificates.filter((cert) => cert.status === status)
     setFilteredCertificates(filtered)
   }
 
@@ -139,9 +79,8 @@ export function Carreira() {
                 <AlertDialogTrigger asChild>
                   <div className="border border-[#e9b874] border-opacity-30 shadow-inner shadow-black hover:border-[#e9b874] hover:border-opacity-100">
                     <img
-                      key={certificate.id}
                       src={certificate.image}
-                      alt=""
+                      alt={certificate.title}
                       className="w-80 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]"
                     />
                   </div>
