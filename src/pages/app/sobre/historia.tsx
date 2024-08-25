@@ -1,5 +1,8 @@
 import { CodeXml, Github, Linkedin, MoveUpRight } from 'lucide-react'
 
+import Tiago1 from '@/assets/imageProfile/Tiago 1.jpg'
+import Tiago2 from '@/assets/imageProfile/Tiago 2.jpg'
+import Tiago3 from '@/assets/imageProfile/Tiago 3.jpg'
 import { useMainHeight } from '@/hooks/useMainHeight'
 
 export function Historia() {
@@ -106,6 +109,51 @@ export function Historia() {
             </div>
           </div>
         </article>
+        <section aria-labelledby="news-blocks" className="mt-auto pb-8">
+          <nav className="ml-8">
+            <ul className="flex flex-col items-center gap-3 md:flex-row md:items-start">
+              <li className="group relative">
+                <a
+                  href="http://localhost:5173/src\assets\imageProfile\Tiago 1.jpg"
+                  target="_blank"
+                  className="flex flex-col gap-2"
+                  rel="noreferrer"
+                >
+                  <div className="border border-black">
+                    <img src={Tiago1} alt="" className="h-52 w-full" />
+                  </div>
+                  <h2 className="font-semibold">Tiago</h2>
+                </a>
+              </li>
+              <li className="group relative">
+                <a
+                  href="http://localhost:5173/src\assets\imageProfile\Tiago 2.jpg"
+                  target="_blank"
+                  className="flex flex-col gap-2"
+                  rel="noreferrer"
+                >
+                  <div className="border border-black">
+                    <img src={Tiago2} alt="" className="h-52 w-full" />
+                  </div>
+                  <h2 className="font-semibold">Lacerda</h2>
+                </a>
+              </li>
+              <li className="group relative">
+                <a
+                  href="http://localhost:5173/src\assets\imageProfile\Tiago 3.jpg"
+                  target="_blank"
+                  className="flex flex-col gap-2"
+                  rel="noreferrer"
+                >
+                  <div className="border border-black">
+                    <img src={Tiago3} alt="" className="h-52 w-full" />
+                  </div>
+                  <h2 className="font-semibold">Ferreira</h2>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </main>
     </>
   )
