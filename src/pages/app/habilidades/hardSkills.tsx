@@ -2,10 +2,12 @@ import { FaCss3, FaHtml5, FaJs, FaReact } from 'react-icons/fa'
 import { RiNextjsFill } from 'react-icons/ri'
 import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 
+import { useCountUp } from '@/hooks/useCountUp'
 import { useMainHeight } from '@/hooks/useMainHeight'
 
 export function HardSkills() {
   const mainHeight = useMainHeight(180)
+  useCountUp({ start: 0, end: 8, duration: 700, elementId: 'elementCounter' })
 
   return (
     <main
@@ -14,7 +16,9 @@ export function HardSkills() {
     >
       <div className="col-span-1">
         <div className="flex cursor-default flex-col items-center border border-[#e9b874] pb-4">
-          <span className="text-[80px]">8</span>
+          <span id="elementCounter" className="text-[80px]">
+            0
+          </span>
           <p className="text-center uppercase">Quantidade de hard skills</p>
         </div>
       </div>
