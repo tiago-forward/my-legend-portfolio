@@ -26,8 +26,10 @@ export function ClientGeral() {
           <h2 className="text-xl text-[#efe8d186]">Desenvolvedor front-end</h2>
           <Button asChild className="buttonGeral group rounded-none">
             <a
-              href="#"
+              href="https://my-legend-portfolio-snowy.vercel.app/src/assets/TiagoLacerdaCurriculo.pdf"
+              target="_blank"
               className="border-2 uppercase tracking-widest text-[#af9771] hover:text-[#f1ede1]"
+              rel="noreferrer"
             >
               Download CV
             </a>

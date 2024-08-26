@@ -10,7 +10,7 @@ export default function HighlightsHome() {
         <ul className="mt-10 flex flex-col items-center gap-3 md:mt-4 md:flex-row md:items-start">
           <li className="group relative w-full sm:w-80">
             <a
-              href="http://localhost:5173\src\assets\imageProfile\Setup.jpg"
+              href="https://my-legend-portfolio-snowy.vercel.app/src/assets/imageProfile/Setup.jpg"
               target="_blank"
               className="flex flex-col gap-2"
               rel="noreferrer"
