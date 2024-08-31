@@ -13,6 +13,7 @@ Tabela de Conteúdos
       * [Seção de Projetos](#projetos)
    * [Responsivo](#responsivo)
    * [Tecnologias](#tecnologias-utilizadas)
+   <!-- * [Desafios](#desafios-durante-o-coding) -->
 
 ## Sobre
 Um portfólio inspirado totalmente no Client (aplicação) do famoso jogo **League of Legends** onde que cada seção tem uma característica visual deste jogo, transformando componentes do jogo em página e componentes web, possuindo a **Página principal do Client** com **Cabeçalho**, **Sobre**, **Habilidades**, **Formações** e **Projetos**.
@@ -74,3 +75,7 @@ Um portfólio inspirado totalmente no Client (aplicação) do famoso jogo **Leag
   <img align="center" alt="React" height="32" width="40" src="https://cdn.simpleicons.org/react" />
   <img align="center" alt="Tailwindcss" height="32" width="40" src="https://cdn.simpleicons.org/tailwindcss" />
 </div>
+
+<!-- ## Desafios Durante o Coding
+
+<p>Esse coding foi o <strong>mais desafiador da minha carreira</strong>. Além de desenvolver um design por <strong>conta própria</strong>, tive que evoluir muitas <strong>habilidades</strong> e aprender muitos <strong>conceitos</strong> que ainda não conhecia. Desenvolver um menu-hambúrguer mais <strong>interativo e agradável</strong>, seções com tamanhos limitados tornando o <strong>design mais simplista</strong>, botões fixos com <strong>funções e designs únicos</strong>, entre muitas outras coisas. <br><br> A divisão de <strong>pastas</strong> e <strong>subpastas</strong> sempre foi algo <strong>muito satisfatório</strong> para mim. Poder saber <strong>exatamente</strong> onde tenho que mexer é <strong>essencial</strong>, tanto durante o <strong>processo de coding</strong> quanto de <strong>refatoração</strong>, e até mesmo caso eu queira adicionar algumas <strong>atualizações futuramente</strong>. <br><br> A criação de <strong>seções roláveis</strong> foi a parte mais <strong>complicada</strong> para mim durante o desenvolvimento deste portfólio, o que me levou ao <strong>aprofundamento dos conceitos de JavaScript</strong>, e também me fez <strong>evoluir</strong> na forma como <strong>busco as informações</strong> que preciso para cada situação adversa aparente. <br><br> Por fim, o que mais <strong>dificultou</strong> o meu desenvolvimento foi a forma como <strong>organizaria meu tempo</strong>. Após adquirir a <strong>bolsa do Ifood</strong>, meus dias úteis da semana foram <strong>completamente destinados ao mesmo</strong>, sobrando apenas os finais de semana para o portfólio. Após as semanas de adaptação se passarem, pude <strong>melhorar demais minha organização</strong>, tornando assim, o desenvolvimento completo do meu portfólio <strong>possível</strong>.</p> -->
