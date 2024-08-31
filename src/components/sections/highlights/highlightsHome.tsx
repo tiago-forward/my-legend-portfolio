@@ -22,10 +22,10 @@ export default function HighlightsHome() {
                   className="h-52 w-full border-2 border-zinc-700 group-hover:border-[#a18052] sm:h-44 sm:w-80"
                 />
               </div>
-              <h2 className="font-semibold">Meu setup</h2>
+              <h2 className="font-bold text-client-TextPrimary text-stroke group-hover:text-client-TextPrimaryHover">Meu setup</h2>
               <SquareArrowOutUpRight
                 size={16}
-                className="absolute right-1 top-1 text-[#a18052] group-hover:text-[#e9b874]"
+                className="absolute right-1 top-1 text-client-AnchorIcon group-hover:text-client-AnchorIconHover"
               />
             </a>
           </li>
@@ -43,13 +43,13 @@ export default function HighlightsHome() {
                   className="h-52 w-full border-2 border-zinc-700 group-hover:border-[#a18052] sm:h-44 sm:w-80"
                 />
               </div>
-              <h2 className="font-semibold">
+              <h2 className="font-bold text-client-TextPrimary text-stroke group-hover:text-client-TextPrimaryHover">
                 Meu mais recente projeto em desenvolvimento - My Legend
                 Portfolio
               </h2>
               <SquareArrowOutUpRight
                 size={16}
-                className="absolute right-1 top-1 text-[#a18052] group-hover:text-[#e9b874]"
+                className="absolute right-1 top-1 text-client-AnchorIcon group-hover:text-client-AnchorIconHover"
               />
             </a>
           </li>

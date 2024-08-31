@@ -43,41 +43,41 @@ export function Jornada() {
           onValueChange={handleChangeState}
           className="flex flex-col items-start gap-0"
         >
-          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="todos"
               id="r1"
-              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-client-InputRadio"
             />
             <Label
               htmlFor="r1"
-              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Todos
             </Label>
           </div>
-          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="desenvolvimento"
               id="r2"
-              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-client-InputRadio"
             />
             <Label
               htmlFor="r2"
-              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Desenvolvimento
             </Label>
           </div>
-          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="finalizado"
               id="r3"
-              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-client-InputRadio"
             />
             <Label
               htmlFor="r3"
-              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Finalizado
             </Label>
@@ -89,7 +89,7 @@ export function Jornada() {
           {filteredProjects.map((project) => (
             <li
               key={project.id}
-              className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100"
+              className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 opacity-80 hover:opacity-100"
             >
               <AlertDialog>
                 <AlertDialogTrigger asChild>
@@ -103,7 +103,7 @@ export function Jornada() {
                 </AlertDialogTrigger>
                 <AlertDialogContent className="flex flex-col items-center border-[#e9b874] bg-aside-bg px-0 pt-0 sm:min-w-[700px] sm:rounded-none">
                   <AlertDialogHeader className="relative space-y-0">
-                    <AlertDialogTitle className="absolute bottom-0 left-1/2 m-auto w-4/5 -translate-x-2/4 border-b border-[#83612b] text-center text-xl uppercase tracking-wider text-[#f1ede1]">
+                    <AlertDialogTitle className="absolute bottom-0 left-1/2 m-auto w-4/5 -translate-x-2/4 border-b border-[#83612b] text-center text-xl uppercase tracking-wider text-client-TextSecondary">
                       {project.title}
                     </AlertDialogTitle>
                     <AlertDialogDescription>
@@ -121,7 +121,7 @@ export function Jornada() {
                       <a
                         href={project.repositoryUrl}
                         target="_blank"
-                        className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
+                        className="flex gap-1 opacity-80 text-client-TextPrimary hover:text-client-TextSecondary hover:opacity-100"
                         rel="noreferrer"
                       >
                         <FaGithub size={18} />
@@ -132,7 +132,7 @@ export function Jornada() {
                           key={project.id}
                           href={project.projectUrl}
                           target="_blank"
-                          className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
+                          className="flex gap-1 opacity-80 text-client-TextPrimary hover:text-client-TextSecondary hover:opacity-100"
                           rel="noreferrer"
                         >
                           <TbNavigationShare size={18} />
@@ -141,7 +141,7 @@ export function Jornada() {
                       )}
                     </div>
                   </AlertDialogFooter>
-                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 text-opacity-80 hover:bg-aside-bg hover:text-[#f1ede1] hover:text-opacity-100">
+                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 opacity-80 hover:bg-aside-bg text-client-TextSecondary hover:text-client-TextSecondary hover:opacity-100 border-none">
                     <X size={30} className="p-1" />
                   </AlertDialogCancel>
                 </AlertDialogContent>

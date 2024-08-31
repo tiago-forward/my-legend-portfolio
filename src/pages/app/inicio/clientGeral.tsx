@@ -20,15 +20,15 @@ export function ClientGeral() {
           </HeaderMainNav>
         </HeaderMainRoot>
         <article className="mt-10 flex flex-col items-start gap-4 md:w-2/5 xl:mt-60">
-          <h1 className="text-5xl font-bold uppercase text-amber-50">
+          <h1 className="text-5xl font-bold uppercase text-client-TextSecondary cursor-default">
             Seja bem vindo ao meu novo portfolio
           </h1>
-          <h2 className="text-xl text-[#efe8d186]">Desenvolvedor front-end</h2>
+          <h2 className="text-xl text-client-TextTertiary cursor-default">Desenvolvedor front-end</h2>
           <Button asChild className="buttonGeral group rounded-none">
             <a
               href="https://drive.google.com/file/d/1ow2TnKL-uAQEBmtNdODyBaahTBsiS6Iz/view?usp=drive_linkhttps://drive.google.com/file/d/18hPHHTmwgMZo4tQgbZHmrZD1OXwvSUf0/view?usp=drive_link"
               target="_blank"
-              className="border-2 uppercase tracking-widest text-[#af9771] hover:text-[#f1ede1]"
+              className="border-2 uppercase tracking-widest text-client-TextPrimary hover:text-client-TextSecondary"
               rel="noreferrer"
             >
               Download CV

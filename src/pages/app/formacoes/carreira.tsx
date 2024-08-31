@@ -40,15 +40,15 @@ export function Carreira() {
           onValueChange={handleChangeState}
           className="flex flex-col items-start gap-0"
         >
-          <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="concluidos"
               id="r1"
-              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-client-InputRadio"
             />
             <Label
               htmlFor="r1"
-              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Concluídos
             </Label>

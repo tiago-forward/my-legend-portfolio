@@ -24,7 +24,7 @@ export function NavLinkHeader(props: NavLinkHeaderProps) {
       <Link
         onClick={handleClick}
         data-current={isActive}
-        className={`flex h-full items-center px-2 text-sm transition duration-300 hover:bg-navLinkHover hover:text-[#f1ede1] ${isActive ? 'text-[#f1ede1] data-[current=true]:bg-navLinkHover' : ''}`}
+        className={`font-semibold flex h-full items-center px-2 text-sm transition duration-300 hover:bg-navLinkHover text-client-TextPrimary hover:text-client-TextPrimaryHover ${isActive ? 'text-client-TextPrimaryActive data-[current=true]:bg-navLinkHover' : ''}`}
         {...props}
       />
     </>

@@ -65,11 +65,45 @@
   }
   body {
     @apply bg-background text-foreground;
-    color: #ccbb8a;
     font-family: "League Spartan", sans-serif;
     letter-spacing: 0.05em;
   }
 }
+
+@layer base {
+  :root {
+    --primary: #c4b998;
+    --secondary: #f1ede1;
+    --tertiary: #efe8d186;
+
+    --divide-main: #6a64568e;
+
+    --text-primary: #c4b998;
+    --text-primary-hover: #f1ede1;
+    --text-primary-active: #f1ede1;
+    --text-secondary: #f1ede1;
+    --text-tertiary: #a19c8c;
+    --text-level: #f1ede1ba;
+    --text-status-online: #22c55e;
+    --text-anchor: #0891b2;
+    --text-anchor-hover: #cffafe;
+    --text-counter: #f1ede1ba;
+    --text-title-collection: #f1ede1ba;
+
+    --anchor-icon: #a18052;
+    --anchor-icon-hover: #e9b874;
+    --anchor-icon-media: #e9b874;
+    --anchor-icon-media-hover: #f1ede1;
+
+    --input-radio: #e9b874;
+  }
+}
+
+
+
+
+
+
 
 .bola {
   border-radius: 50%;
@@ -123,4 +157,8 @@
   box-shadow: inset 0 0 20px #4d3b1e, 0 0 20px rgba(255, 255, 255, .2);
   outline-color: rgba(255, 255, 255, 0);
   text-shadow: 1px 1px 10px #4d3b1e; 
+}
+
+.text-stroke {
+  -webkit-text-stroke: 0.8px black;
 }

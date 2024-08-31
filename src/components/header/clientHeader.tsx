@@ -56,7 +56,7 @@ export function ClientHeader() {
         </ul>
 
         <div className="flex h-full items-center gap-4 bg-aside-bg px-3 pb-2 lg:col-span-1">
-          <div className="relative my-2 w-16 rounded-full border border-black hover:text-white">
+          <div className="relative my-2 w-16 rounded-full border border-black">
             <img
               src="https://github.com/tiago-forward.png"
               alt="tiago forward"
@@ -64,7 +64,7 @@ export function ClientHeader() {
             />
             <div className="flex items-center justify-center">
               <span
-                className="absolute cursor-default rounded-[6px] border-2 border-[#e9b874] bg-[#2f3640] px-2 text-xs font-bold"
+                className="absolute cursor-default rounded-[6px] border-2 border-[#e9b874] bg-[#2f3640] px-2 text-xs font-bold text-client-TextLevel"
                 title="Idade"
               >
                 26
@@ -73,14 +73,14 @@ export function ClientHeader() {
           </div>
           <div className="flex flex-col">
             <span
-              className="cursor-default font-bold text-[#f1ede1]"
+              className="cursor-default font-bold text-client-TextSecondary"
               title="Nome"
             >
               TiagoForward
             </span>
             <div className="flex items-center gap-2">
               <div className="bola bg-green-500"></div>
-              <span className="mt-1 cursor-default text-green-500">Online</span>
+              <span className="mt-1 cursor-default text-client-TextStatusOnline">Online</span>
             </div>
           </div>
         </div>

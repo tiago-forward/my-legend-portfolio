@@ -20,7 +20,7 @@ export function NavLinkMain(props: NavLinkMainProps) {
       <Link
         onClick={handleClick}
         data-current={isActive}
-        className={`transition duration-300 hover:text-[#f1ede1] ${isActive ? `text-[#f1ede1]` : ``}`}
+        className={`transition duration-300 hover:text-client-TextPrimaryHover ${isActive ? `text-client-TextPrimaryActive` : ``}`}
         {...props}
       />
       {isActive && (
