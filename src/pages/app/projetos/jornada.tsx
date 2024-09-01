@@ -17,9 +17,18 @@ import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { projects, ProjectsProps } from '@/constants/index'
 import { useMainHeight } from '@/hooks/useMainHeight'
+import { usePlayAudioOnHover } from '@/hooks/usePlayAudioOnHover'
+import { usePlayAudioOnClick } from '@/hooks/usePlayAudioOnClick'
+import hoverSound from '@/assets/audio/Audio-collection.wav'
+import openSound from '@/assets/audio/Audio-open-collection.wav'
+import closeSound from '@/assets/audio/Audio-close-collection.wav'
 
 export function Jornada() {
   const mainHeight = useMainHeight(180)
+
+  const playHoverSound = usePlayAudioOnHover(hoverSound)
+  const playOpenSound = usePlayAudioOnClick(openSound)
+  const playCloseSound = usePlayAudioOnClick(closeSound)
 
   const [filteredProjects, setFilteredProjects] = useState<ProjectsProps[]>(
     () => projects.filter((cert) => cert.status.includes('todos')),
@@ -30,6 +39,14 @@ export function Jornada() {
   ) {
     const filtered = projects.filter((cert) => cert.status.includes(status))
     setFilteredProjects(filtered)
+  }
+
+  function handleOpenSound(){
+    playOpenSound()
+  }
+
+  function handleCloseSound(){
+    playCloseSound()
   }
 
   return (
@@ -90,6 +107,8 @@ export function Jornada() {
             <li
               key={project.id}
               className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 opacity-80 hover:opacity-100"
+              onMouseEnter={playHoverSound}
+              onClick={handleOpenSound}
             >
               <AlertDialog>
                 <AlertDialogTrigger asChild>
@@ -141,7 +160,7 @@ export function Jornada() {
                       )}
                     </div>
                   </AlertDialogFooter>
-                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 opacity-80 hover:bg-aside-bg text-client-TextSecondary hover:text-client-TextSecondary hover:opacity-100 border-none">
+                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 opacity-80 hover:bg-aside-bg text-client-TextSecondary hover:text-client-TextSecondary hover:opacity-100 border-none" onClick={handleCloseSound}>
                     <X size={30} className="p-1" />
                   </AlertDialogCancel>
                 </AlertDialogContent>

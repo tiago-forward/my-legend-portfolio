@@ -1,15 +1,20 @@
 import { Link, LinkProps } from 'react-router-dom'
+import audioGold from '@/assets/audio/Audio-menu.wav'
 
 import { useRoute } from '@/context/RouteContext'
+import { usePlayAudioOnClick } from '@/hooks/usePlayAudioOnClick';
 
 export interface NavLinkHeaderProps extends LinkProps {}
 
 export function NavLinkHeader(props: NavLinkHeaderProps) {
   const { activeRoute, setActiveRoute } = useRoute()
 
+  const playAudio = usePlayAudioOnClick(audioGold)
+
   // Define a rota ativa quando o link é clicado
   const handleClick = () => {
     setActiveRoute(props.to as string)
+    playAudio()
   }
 
   const isActive =

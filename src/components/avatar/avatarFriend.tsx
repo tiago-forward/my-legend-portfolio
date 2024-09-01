@@ -19,13 +19,13 @@ export function AvatarFriend({ id, url, label }: AvatarFriendProps) {
       </div>
       <div className="flex flex-col">
         <span
-          className="font-bold opacity-30 group-hover:opacity-60"
+          className="font-bold text-client-TextSecondary opacity-30 group-hover:opacity-60"
           title="Nome"
         >
           {label}
         </span>
         <div className="flex items-center gap-2">
-          <span className="mt-1 opacity-40 group-hover:opacity-60">
+          <span className="mt-1 text-client-TextSecondary opacity-40 group-hover:opacity-60">
             Offlile
           </span>
         </div>

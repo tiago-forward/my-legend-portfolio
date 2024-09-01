@@ -1,14 +1,19 @@
 import { Link, LinkProps } from 'react-router-dom'
+import audioGold from '@/assets/audio/Audio-menu.wav'
 
 import { useRoute } from '@/context/RouteContext'
+import { usePlayAudioOnClick } from '@/hooks/usePlayAudioOnClick'
 
 export interface NavLinkMainProps extends LinkProps {}
 
 export function NavLinkMain(props: NavLinkMainProps) {
   const { activeSubRoute, setActiveSubRoute } = useRoute()
 
+  const playAudio = usePlayAudioOnClick(audioGold)
+
   const handleClick = () => {
     setActiveSubRoute(props.to as string)
+    playAudio()
   }
 
   const isActive =

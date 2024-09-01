@@ -28,7 +28,7 @@ export default function AccordionGeral() {
       onValueChange={(value) => setAccordionIsOpen(value === 'item-1')}
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger className="flex w-full items-center gap-2 px-2 py-1 uppercase hover:bg-[#e8edf928]">
+        <AccordionTrigger className="flex w-full items-center gap-2 px-2 py-1 uppercase hover:bg-[#e8edf928] text-client-TextSecondary opacity-80 hover:opacity-100">
           <Play
             size={10}
             className={`mb-1 transform transition-transform duration-200 ${accordionIsOpen ? 'rotate-90' : 'rotate-0'}`}

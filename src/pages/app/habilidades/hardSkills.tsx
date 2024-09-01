@@ -1,10 +1,14 @@
 import { hardSkills, hardSkillsProps } from '@/constants/index'
 import { useCountUp } from '@/hooks/useCountUp'
 import { useMainHeight } from '@/hooks/useMainHeight'
+import { usePlayAudioOnHover } from '@/hooks/usePlayAudioOnHover'
+import hoverSound from '@/assets/audio/Audio-collection.wav'
 
 export function HardSkills() {
   const mainHeight = useMainHeight(180)
   useCountUp({ start: 0, end: 8, duration: 700, elementId: 'elementCounter' })
+
+  const playHoverSound = usePlayAudioOnHover(hoverSound)
 
   return (
     <main
@@ -26,6 +30,7 @@ export function HardSkills() {
               <li
                 key={skill.id}
                 className="m-auto flex flex-col flex-wrap items-center gap-4 text-client-Secondary"
+                onMouseEnter={playHoverSound}
               >
                 <div className="opacity-80 hover:opacity-100 cursor-pointer">{skill.icon}</div>
                 <h3 className="cursor-default">{skill.title}</h3>

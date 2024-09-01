@@ -16,9 +16,19 @@ import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { certificates, CertificatesProps } from '@/constants/index'
 import { useMainHeight } from '@/hooks/useMainHeight'
+import { usePlayAudioOnHover } from '@/hooks/usePlayAudioOnHover'
+import { usePlayAudioOnClick } from '@/hooks/usePlayAudioOnClick'
+import hoverSound from '@/assets/audio/Audio-collection.wav'
+import openSound from '@/assets/audio/Audio-open-collection.wav'
+import closeSound from '@/assets/audio/Audio-close-collection.wav'
+
 
 export function Carreira() {
   const mainHeight = useMainHeight(180)
+
+  const playHoverSound = usePlayAudioOnHover(hoverSound)
+  const playOpenSound = usePlayAudioOnClick(openSound)
+  const playCloseSound = usePlayAudioOnClick(closeSound)
 
   const [filteredCertificates, setFilteredCertificates] = useState<
     CertificatesProps[]
@@ -27,6 +37,14 @@ export function Carreira() {
   function handleChangeState(status: 'concluidos' | 'cursando') {
     const filtered = certificates.filter((cert) => cert.status === status)
     setFilteredCertificates(filtered)
+  }
+
+  function handleOpenSound(){
+    playOpenSound()
+  }
+
+  function handleCloseSound(){
+    playCloseSound()
   }
 
   return (
@@ -74,6 +92,8 @@ export function Carreira() {
             <li
               key={certificate.id}
               className="relative m-auto flex cursor-pointer flex-col flex-wrap items-center gap-4 text-[#f1ede1] opacity-80 hover:opacity-100"
+              onMouseEnter={playHoverSound}
+              onClick={handleOpenSound}
             >
               <AlertDialog>
                 <AlertDialogTrigger asChild>
@@ -113,7 +133,7 @@ export function Carreira() {
                       </a>
                     </div>
                   </AlertDialogFooter>
-                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 text-opacity-80 hover:bg-aside-bg hover:text-[#f1ede1] hover:text-opacity-100">
+                  <AlertDialogCancel className="absolute right-2 top-2 h-8 rounded-sm bg-aside-bg p-0 opacity-80 hover:bg-aside-bg text-client-TextSecondary hover:text-client-TextSecondary hover:opacity-100 border-none" onClick={handleCloseSound}>
                     <X size={30} className="p-1" />
                   </AlertDialogCancel>
                 </AlertDialogContent>
