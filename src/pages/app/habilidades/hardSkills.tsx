@@ -26,16 +26,14 @@ export function HardSkills() {
       <div className="col-span-1 md:col-span-3">
         <ul className="flex flex-wrap items-center gap-4">
           {hardSkills.map((skill: hardSkillsProps) => (
-            <>
-              <li
-                key={skill.id}
-                className="m-auto flex flex-col flex-wrap items-center gap-4 text-client-Secondary"
-                onMouseEnter={playHoverSound}
-              >
-                <div className="opacity-80 hover:opacity-100 cursor-pointer">{skill.icon}</div>
-                <h3 className="cursor-default">{skill.title}</h3>
-              </li>
-            </>
+            <li
+              key={skill.id}
+              className="m-auto flex flex-col flex-wrap items-center gap-4 text-client-Secondary"
+              onMouseEnter={playHoverSound}
+            >
+              <div className="opacity-80 hover:opacity-100 cursor-pointer">{skill.icon}</div>
+              <h3 className="cursor-default">{skill.title}</h3>
+            </li>
           ))}
         </ul>
       </div>
