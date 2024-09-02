@@ -60,7 +60,7 @@ export function Jornada() {
           onValueChange={handleChangeState}
           className="flex flex-col items-start gap-0"
         >
-          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-[95%] items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="todos"
               id="r1"
@@ -68,12 +68,12 @@ export function Jornada() {
             />
             <Label
               htmlFor="r1"
-              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
+              className="flex-1 cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Todos
             </Label>
           </div>
-          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-[95%] items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="desenvolvimento"
               id="r2"
@@ -81,12 +81,12 @@ export function Jornada() {
             />
             <Label
               htmlFor="r2"
-              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
+              className="flex-1 cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Desenvolvimento
             </Label>
           </div>
-          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 flex w-[95%] items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="finalizado"
               id="r3"
@@ -94,7 +94,7 @@ export function Jornada() {
             />
             <Label
               htmlFor="r3"
-              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
+              className="flex-1 cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Finalizado
             </Label>

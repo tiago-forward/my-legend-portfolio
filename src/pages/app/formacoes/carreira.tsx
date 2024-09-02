@@ -58,7 +58,7 @@ export function Carreira() {
           onValueChange={handleChangeState}
           className="flex flex-col items-start gap-0"
         >
-          <div className="ml-2 pl-1 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 w-[95%] flex items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="concluidos"
               id="r1"
@@ -66,12 +66,12 @@ export function Carreira() {
             />
             <Label
               htmlFor="r1"
-              className="w-full cursor-pointer py-2 uppercase text-client-TextSecondary"
+              className="flex-1 cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
               Concluídos
             </Label>
           </div>
-          {/* <div className="ml-2 flex w-full items-center gap-4 hover:bg-[#e8edf928]">
+          {/* <div className="ml-2 flex w-[95%] items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
               value="cursando"
               id="r2"
@@ -79,7 +79,7 @@ export function Carreira() {
             />
             <Label
               htmlFor="r2"
-              className="w-full cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="flex-1 cursor-pointer py-2 uppercase text-[#f1ede1]"
             >
               Cursando
             </Label>
