@@ -120,7 +120,7 @@ export function Historia() {
                   rel="noreferrer"
                 >
                   <div className="border border-black">
-                    <img src={Tiago1} alt="" className="h-52 w-full" />
+                    <img src={Tiago1} alt="Tiago Forward" className="h-52" />
                   </div>
                   <h2 className="font-semibold">Tiago</h2>
                 </a>
@@ -133,7 +133,7 @@ export function Historia() {
                   rel="noreferrer"
                 >
                   <div className="border border-black">
-                    <img src={Tiago2} alt="" className="h-52 w-full" />
+                    <img src={Tiago2} alt="Tiago Forward" className="h-52" />
                   </div>
                   <h2 className="font-semibold">Lacerda</h2>
                 </a>
@@ -146,7 +146,7 @@ export function Historia() {
                   rel="noreferrer"
                 >
                   <div className="border border-black">
-                    <img src={Tiago3} alt="" className="h-52 w-full" />
+                    <img src={Tiago3} alt="Tiago Forward" className="h-52" />
                   </div>
                   <h2 className="font-semibold">Ferreira</h2>
                 </a>
