@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async'
 import { Outlet, useLocation } from 'react-router-dom'
 
 import AccordionGeral from '@/components/aside/accordion/accordionGeral'
-import AccordionRocketseat from '@/components/aside/accordion/accordionRocketseat'
 import { ClientHeader } from '@/components/header/clientHeader'
 
 export function ClientLayount() {
@@ -22,10 +21,12 @@ export function ClientLayount() {
           </main>
           <aside className="col-span-4 bg-aside-bg lg:col-span-1">
             <header className="mx-2 mb-4 mt-2">
-              <span className="cursor-default uppercase">Social</span>
+              <span className="cursor-default uppercase text-client-TextSecondary opacity-80">Social</span>
             </header>
-            <AccordionRocketseat />
             <AccordionGeral />
+            <footer className="text-client-TextTertiary opacity-40 border-t border-border-main text-center pt-8">
+              V 2.18
+            </footer>
           </aside>
         </div>
       </div>
