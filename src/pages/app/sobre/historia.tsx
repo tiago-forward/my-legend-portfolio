@@ -126,58 +126,37 @@ export function Historia() {
             <nav className="ml-8">
               <ul className="flex flex-col items-center gap-3 md:flex-row md:items-start">
                 <li className="group relative">
-                  <a
-                    href="http://localhost:5173/src\assets\imageProfile\Tiago 1.jpg"
-                    target="_blank"
-                    className="flex flex-col gap-2"
-                    rel="noreferrer"
-                  >
-                    {isLoadingImage && (
-                      <ImageProfile
-                        image={{
-                          id: 1,
-                          label: 'Tiago',
-                          url: Tiago1
-                        }}
-                      />
-                    )}
-                  </a>
+                  {isLoadingImage && (
+                    <ImageProfile
+                      image={{
+                        id: 1,
+                        label: 'Tiago',
+                        url: Tiago1
+                      }}
+                    />
+                  )}
                 </li>
                 <li className="group relative">
-                  <a
-                    href="http://localhost:5173/src\assets\imageProfile\Tiago 2.jpg"
-                    target="_blank"
-                    className="flex flex-col gap-2"
-                    rel="noreferrer"
-                  >
-                    {isLoadingImage && (
-                      <ImageProfile
-                        image={{
-                          id: 2,
-                          label: 'Lacerda',
-                          url: Tiago2
-                        }}
-                      />
-                    )}
-                  </a>
+                  {isLoadingImage && (
+                    <ImageProfile
+                      image={{
+                        id: 2,
+                        label: 'Lacerda',
+                        url: Tiago2
+                      }}
+                    />
+                  )}
                 </li>
                 <li className="group relative">
-                  <a
-                    href="http://localhost:5173/src\assets\imageProfile\Tiago 3.jpg"
-                    target="_blank"
-                    className="flex flex-col gap-2"
-                    rel="noreferrer"
-                  >
-                    {isLoadingImage && (
-                      <ImageProfile
-                        image={{
-                          id: 3,
-                          label: 'Ferreira',
-                          url: Tiago3
-                        }}
-                      />
-                    )}
-                  </a>
+                  {isLoadingImage && (
+                    <ImageProfile
+                      image={{
+                        id: 3,
+                        label: 'Ferreira',
+                        url: Tiago3
+                      }}
+                    />
+                  )}
                 </li>
               </ul>
             </nav>

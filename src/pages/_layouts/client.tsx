@@ -81,7 +81,7 @@ export function ClientLayount() {
                 </header>
                 <AccordionGeral />
                 <footer className="text-client-TextTertiary opacity-40 border-t border-border-main text-center pt-8">
-                  V 2.18
+                  V 2.21
                 </footer>
               </>
             )}
