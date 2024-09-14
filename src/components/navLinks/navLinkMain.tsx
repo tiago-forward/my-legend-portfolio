@@ -1,31 +1,30 @@
-import { Link, LinkProps } from 'react-router-dom'
+import { Link, LinkProps, useLocation } from 'react-router-dom'
 import audioGold from '@/assets/audio/Audio-menu.wav'
-
-import { useRoute } from '@/context/RouteContext'
 import { usePlayAudioOnClick } from '@/hooks/usePlayAudioOnClick'
+import { useState } from 'react'
 
-export interface NavLinkMainProps extends LinkProps {}
+export interface NavLinkMainProps extends LinkProps {
+  exact?: boolean
+}
 
 export function NavLinkMain(props: NavLinkMainProps) {
-  const { activeSubRoute, setActiveSubRoute } = useRoute()
-
+  const location = useLocation()
+  const [_, setActiveLink] = useState<string>(location.pathname)
   const playAudio = usePlayAudioOnClick(audioGold)
 
-  const handleClick = () => {
-    setActiveSubRoute(props.to as string)
+  const handleSetActiveLink = (href: string) => {
+    setActiveLink(href)
     playAudio()
   }
 
-  const isActive =
-    (props.to === '/' && activeSubRoute === '/') ||
-    (props.to !== '/' && activeSubRoute.startsWith(props.to as string))
+  const isActive = location.pathname.startsWith(props.to as string)
 
   return (
     <div className="flex flex-col items-center px-2">
       <Link
-        onClick={handleClick}
+        onClick={() => handleSetActiveLink(props.to as string)}
         data-current={isActive}
-        className={`transition duration-300 hover:text-client-TextPrimaryHover ${isActive ? `text-client-TextPrimaryActive` : ``}`}
+        className={`transition duration-300 hover:text-client-TextPrimaryHover ${isActive ? `text-client-TextPrimaryActive` : `text-client-TextPrimary`}`}
         {...props}
       />
       {isActive && (

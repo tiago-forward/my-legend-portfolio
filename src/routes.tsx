@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { ClientLayount } from './pages/_layouts/client'
@@ -28,12 +28,16 @@ export const router = createBrowserRouter([
           {
             path: '/sobre',
             element: <ClientSobre />,
-            children: [{ path: 'historia', element: <Historia /> }],
+            children: [
+              { index: true, element: <Navigate to='historia' replace /> },
+              { path: 'historia', element: <Historia /> }
+            ],
           },
           {
             path: '/habilidades',
             element: <ClientHabilidades />,
             children: [
+              { index: true, element: <Navigate to='hard-skills' replace /> },
               { path: 'hard-skills', element: <HardSkills /> },
               { path: 'soft-skills', element: <SoftSkills /> },
             ],
@@ -41,12 +45,18 @@ export const router = createBrowserRouter([
           {
             path: '/formacoes',
             element: <ClientFormacoes />,
-            children: [{ path: 'carreira', element: <Carreira /> }],
+            children: [
+              { index: true, element: <Navigate to='carreira' replace /> },
+              { path: 'carreira', element: <Carreira /> },
+            ],
           },
           {
             path: '/projetos',
             element: <ClientProjetos />,
-            children: [{ path: 'jornada', element: <Jornada /> }],
+            children: [
+              { index: true, element: <Navigate to='jornada' replace /> },
+              { path: 'jornada', element: <Jornada /> }
+            ],
           },
         ],
       },

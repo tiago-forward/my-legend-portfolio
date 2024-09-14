@@ -26,12 +26,12 @@ export function ClientHabilidades() {
       <section className="flex h-full w-full flex-col justify-between">
         <HeaderMainRoot>
           <HeaderMainNav>
-            <HeaderMainNavItem to={'/habilidades/hard-skills'}>
+            <HeaderMainNavItem to={'/habilidades/hard-skills'} title="Hard Skills">
               Hard Skills
             </HeaderMainNavItem>
-            {/* <HeaderMainNavItem to={'/habilidades/soft-skills'}>
+            <HeaderMainNavItem to={'/habilidades/soft-skills'} title="Soft Skills">
               Soft Skills
-            </HeaderMainNavItem> */}
+            </HeaderMainNavItem>
           </HeaderMainNav>
         </HeaderMainRoot>
         {isLoading ? (

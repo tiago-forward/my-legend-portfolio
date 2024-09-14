@@ -6,13 +6,13 @@ import Logo from '@/assets/logo.png'
 import { NavLinkHeader } from '../navLinks/navLinkHeader'
 
 export function ClientHeader() {
-  const primaryNavItems = [{ id: 1, href: '/', label: 'Início' }]
+  const primaryNavItems = [{ id: 1, href: '/', title: 'Início' }]
 
   const secondaryNavItems = [
-    { id: 1, href: '/sobre/historia', label: 'Sobre' },
-    { id: 2, href: '/habilidades/hard-skills', label: 'Habilidades' },
-    { id: 3, href: '/formacoes/carreira', label: 'Formações' },
-    { id: 4, href: '/projetos/jornada', label: 'Projetos' },
+    { id: 1, href: '/sobre', title: 'Sobre' },
+    { id: 2, href: '/habilidades', title: 'Habilidades' },
+    { id: 3, href: '/formacoes', title: 'Formações' },
+    { id: 4, href: '/projetos', title: 'Projetos' },
   ]
 
   return (
@@ -33,7 +33,7 @@ export function ClientHeader() {
               key={item.id}
               className="relative hidden h-full items-center md:flex"
             >
-              <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
+              <NavLinkHeader to={item.href} exact>{item.title}</NavLinkHeader>
             </li>
           ))}
         </ul>
@@ -42,7 +42,7 @@ export function ClientHeader() {
           {secondaryNavItems.map((item, index) => (
             <React.Fragment key={item.id}>
               <li key={item.id} className="relative flex h-full items-center">
-                <NavLinkHeader to={item.href}>{item.label}</NavLinkHeader>
+                <NavLinkHeader to={item.href}>{item.title}</NavLinkHeader>
               </li>
               {(index + 1) % 2 === 0 &&
                 index < secondaryNavItems.length - 1 && (
