@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { FaCss3, FaHtml5, FaJs, FaReact } from 'react-icons/fa'
-import { RiNextjsFill } from 'react-icons/ri'
-import { SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { RiNextjsFill, RiNodejsLine } from 'react-icons/ri'
+import { SiFastify, SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { v4 as uuidv4 } from 'uuid'
 
 import ImageCertificate1 from '@/assets/certificate/Algoritmo 40 Horas.jpg'
@@ -104,6 +104,20 @@ export const hardSkills: hardSkillsProps[] = [
     title: 'Nextjs',
     icon: (
       <RiNextjsFill className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
+    ),
+  },
+  {
+    id: uuidv4(),
+    title: 'Nodejs',
+    icon: (
+      <RiNodejsLine className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
+    ),
+  },
+  {
+    id: uuidv4(),
+    title: 'Fastfy',
+    icon: (
+      <SiFastify className="flex h-[200px] w-60 border border-zinc-800 shadow-inner shadow-black hover:border-[#e9b874]" />
     ),
   },
 ]
