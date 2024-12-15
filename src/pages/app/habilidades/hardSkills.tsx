@@ -6,7 +6,7 @@ import hoverSound from '@/assets/audio/Audio-collection.wav'
 
 export function HardSkills() {
   const mainHeight = useMainHeight(180)
-  useCountUp({ start: 0, end: 8, duration: 700, elementId: 'elementCounter' })
+  useCountUp({ start: 0, end: 10, duration: 700, elementId: 'elementCounter' })
 
   const playHoverSound = usePlayAudioOnHover(hoverSound)
 
