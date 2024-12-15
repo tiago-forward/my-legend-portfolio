@@ -74,14 +74,9 @@ export function Historia() {
               Objetivo
             </h2>
             <p className="ml-8 text-lg text-client-TextSecondary">
-              Busco oportunidade como Desenvolvedor Web, estou aberto a aprender
+              Busco oportunidade como Desenvolvedor web, estou aberto a aprender
               qualquer linguagem que a mim for sugerido pela empresa em que eu
-              atuar. Tenho habilidades técnicas com HTML, CSS, JavaScript, mas
-              especializado em React com TypeScript. Estou estudando NextJs e
-              Designer System. Pretendo estudar também brevemente o NodeJs. Sigo
-              realizando projetos pessoais, projetos de cursos e alguns
-              desafios, utilizando plataformas e ferramentas como: GitHub, Git,
-              Figma e VSCode.
+              atuar. Tenho habilidades técnicas com JavaScript, React, NextJs, TypeScript e entre outras linguagens. Sigo realizando projetos pessoais, projetos de cursos e alguns desafios, utilizando plataformas e ferramentas como: GitHub, Git, Figma e VSCode.
             </p>
             <h2 className="ml-8 border-b border-[#e9b874] border-opacity-30 pb-3 text-4xl font-semibold uppercase text-client-TextSecondary">
               Experiência profissional
