@@ -32,18 +32,18 @@ export function Carreira() {
 
   const [filteredCertificates, setFilteredCertificates] = useState<
     CertificatesProps[]
-  >(() => certificates.filter((cert) => cert.status === 'concluidos'))
+  >(() => certificates.filter((cert) => cert.status.includes('concluidos')))
 
-  function handleChangeState(status: 'concluidos' | 'cursando') {
-    const filtered = certificates.filter((cert) => cert.status === status)
+  function handleChangeState(status: 'concluidos' | 'destaques') {
+    const filtered = certificates.filter((cert) => cert.status.includes(status))
     setFilteredCertificates(filtered)
   }
 
-  function handleOpenSound(){
+  function handleOpenSound() {
     playOpenSound()
   }
 
-  function handleCloseSound(){
+  function handleCloseSound() {
     playCloseSound()
   }
 
@@ -71,19 +71,19 @@ export function Carreira() {
               Concluídos
             </Label>
           </div>
-          {/* <div className="ml-2 flex w-[95%] items-center gap-4 hover:bg-[#e8edf928]">
+          <div className="ml-2 pl-1 w-[95%] flex items-center gap-4 hover:bg-[#e8edf928]">
             <RadioGroupItem
-              value="cursando"
+              value="destaques"
               id="r2"
-              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-[#e9b874]"
+              className="rotate-45 rounded-none border border-[#e9b874] bg-aside-bg text-client-InputRadio"
             />
             <Label
               htmlFor="r2"
-              className="flex-1 cursor-pointer py-2 uppercase text-[#f1ede1]"
+              className="flex-1 cursor-pointer py-2 uppercase text-client-TextSecondary"
             >
-              Cursando
+              Destaques
             </Label>
-          </div> */}
+          </div>
         </RadioGroup>
       </div>
       <div className="col-span-1 md:col-span-3">
@@ -123,9 +123,9 @@ export function Carreira() {
                   <AlertDialogFooter>
                     <div>
                       <a
-                        href="https://www.rocketseat.com.br/"
+                        href={certificate.link}
                         target="_blank"
-                        className="flex gap-1 opacity-80 hover:text-[#f1ede1] hover:opacity-100"
+                        className="flex gap-1 opacity-80 text-client-TextPrimary hover:text-client-TextSecondary hover:opacity-100"
                         rel="noreferrer"
                       >
                         <FiExternalLink size={18} />

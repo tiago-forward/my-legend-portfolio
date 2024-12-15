@@ -19,6 +19,7 @@ import ImageCertificate5 from '@/assets/certificate/NLW Unite Reactjs.jpg'
 import ImageCertificate4 from '@/assets/certificate/Semana do Python na Prática.jpg'
 import ImageCertificate10 from '@/assets/certificate/SEO para Devs.jpg'
 import ImageCertificate2 from '@/assets/certificate/Simplifica Excell Express.jpg'
+import ImageCertificate16 from '@/assets/certificate/Análise e Desenvolvimento de Sistemas.png'
 import ImageAdviceGeneratorApp from '@/assets/imageProject/Advice Generator App.jpeg'
 import ImageAgênciaXYZ from '@/assets/imageProject/Agência XYZ.jpeg'
 import ImageBlogr from '@/assets/imageProject/Blogr.jpeg'
@@ -111,7 +112,7 @@ export interface CertificatesProps {
   id: string
   title: string
   image: string
-  status: 'concluidos' | 'cursando'
+  status: ('concluidos' | 'destaques')[]
   link: string
   foundation: string
 }
@@ -119,9 +120,17 @@ export interface CertificatesProps {
 export const certificates: CertificatesProps[] = [
   {
     id: uuidv4(),
+    title: 'Análise e Desenvolvimento de Sistemas',
+    image: ImageCertificate16,
+    status: ['concluidos', 'destaques'],
+    link: 'https://graduacao.uninassau.digital/?utm_source=google&utm_medium=search&utm_campaign=um_uninassau_graduacao_ead-vestibular_20251-conversao-google-campanha-regular-uta000924&utm_content=um_uninassau-graduacao-ead-conversao-google-TARG-todasaspracas-branding&gad_source=1&gclid=CjwKCAiAmfq6BhAsEiwAX1jsZ5j_jTOrimVyei9Ywxwf5F5zMKtY3_A33DvNVIoIZVlq3EHBOYUgYRoCWlUQAvD_BwE',
+    foundation: 'UNINASSAU',
+  },
+  {
+    id: uuidv4(),
     title: 'Fundamentos do Next.js',
     image: ImageCertificate15,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -129,7 +138,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Integrando Frontend e Backend',
     image: ImageCertificate14,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -137,7 +146,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Aprofundando em Hooks',
     image: ImageCertificate13,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -145,7 +154,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'HTTP e Perfomance',
     image: ImageCertificate12,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -153,7 +162,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Masterizando o Tailwind',
     image: ImageCertificate11,
-    status: 'concluidos',
+    status: ['concluidos', 'destaques'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -161,7 +170,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'SEO para Devs',
     image: ImageCertificate10,
-    status: 'concluidos',
+    status: ['concluidos', 'destaques'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -169,7 +178,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Clean Code',
     image: ImageCertificate9,
-    status: 'concluidos',
+    status: ['concluidos', 'destaques'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -177,7 +186,7 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Fundamentos do React',
     image: ImageCertificate8,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -185,23 +194,23 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Minicurso de UXUI Design',
     image: ImageCertificate7,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos'],
+    link: 'https://cubos.academy/',
     foundation: 'Formação Cubos Academy',
   },
   {
     id: uuidv4(),
     title: 'Frontend',
     image: ImageCertificate6,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos', 'destaques'],
+    link: 'https://devemdobro.com/matriculas-abertas-bf/',
     foundation: 'Formação DevQuest - Dev em Dobro',
   },
   {
     id: uuidv4(),
     title: 'NLW Unite Reactjs',
     image: ImageCertificate5,
-    status: 'concluidos',
+    status: ['concluidos'],
     link: 'https://www.rocketseat.com.br/',
     foundation: 'Formação Rocketseat',
   },
@@ -209,32 +218,32 @@ export const certificates: CertificatesProps[] = [
     id: uuidv4(),
     title: 'Semana do Python na Prática',
     image: ImageCertificate4,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos'],
+    link: 'https://www.empowerdata.com.br/',
     foundation: 'Formação Empowerdata',
   },
   {
     id: uuidv4(),
     title: 'Desenvolvimento Frontend com Angular',
     image: ImageCertificate3,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos'],
+    link: 'https://www.dio.me/',
     foundation: 'Formação DIO',
   },
   {
     id: uuidv4(),
     title: 'Simplifica Excel Express',
     image: ImageCertificate2,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos'],
+    link: 'https://simplificatreinamentos.com.br/power-excel-08/?utm_source=Gads&utm_medium=[CAPTA%C3%87%C3%83O]_[PESQUISA]&utm_campaign=POWER_EXCEL_T03&utm_content=[AD02]_[PESQUISA]&gad_source=1&gclid=CjwKCAiA0rW6BhAcEiwAQH28IqjxEaKNHbooP7PL33EVUXC2jJ-avVM8UG_bI9BOPQAzLMm2AKBdRBoC1K0QAvD_BwE',
     foundation: 'Formação SIMPLIFICA TREINAMENTOS',
   },
   {
     id: uuidv4(),
     title: 'Algoritmo 40 Horas',
     image: ImageCertificate1,
-    status: 'concluidos',
-    link: 'https://www.rocketseat.com.br/',
+    status: ['concluidos', 'destaques'],
+    link: 'https://www.cursoemvideo.com/',
     foundation: 'Formação Curso em Video',
   },
 ]
@@ -299,7 +308,7 @@ export const projects: ProjectsProps[] = [
     id: uuidv4(),
     title: 'Coffee Delivery',
     image: ImageCoffeeDelivery,
-    status: ['todos', 'desenvolvimento'],
+    status: ['todos', 'finalizado'],
     repositoryUrl:
       'https://github.com/tiago-forward/coffee-delivery-desafio-react',
     projectUrl: 'https://coffee-delivery-desafio-react.vercel.app/',
