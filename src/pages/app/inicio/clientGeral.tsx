@@ -26,7 +26,7 @@ export function ClientGeral() {
           <h2 className="text-xl text-client-TextTertiary cursor-default">Desenvolvedor front-end</h2>
           <Button asChild className="buttonGeral group rounded-none">
             <a
-              href="https://drive.google.com/file/d/18hPHHTmwgMZo4tQgbZHmrZD1OXwvSUf0/view?usp=sharing"
+              href="https://drive.google.com/file/d/1aekIPvvmOWF1NNkd7aXgIm9R-P1A9XfG/view?usp=sharing"
               target="_blank"
               className="border-2 uppercase tracking-widest text-client-TextPrimary hover:text-client-TextSecondary"
               rel="noreferrer"
